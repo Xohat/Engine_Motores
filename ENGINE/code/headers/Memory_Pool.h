@@ -2,6 +2,10 @@
 #include <vector>
 #include <thread>
 #include <assert.h>
+#include <iostream>
+#include <list>
+#include <queue>
+#include <mutex>
 
 class Incremental_Memory_Pool 
 {
@@ -130,38 +134,200 @@ public:
 	}
 };
 
-class Thread_Pool
+class Task 
 {
-	std::vector< std::thread > pool;
+public:
 
-	bool exit;
+	enum Status { WAITING, RUNNING, FINISHED, CANCELED };
+
+private:
+
+	int priority;
+
+	Status status;
 
 public:
 
-	Thread_Pool() : pool(std::thread::hardware_concurrency())
+	Task(int given_priority = 0) 
 	{
-		assert(pool.size() > 0);
-
-		exit = false;
+		status = WAITING;
+		priority = given_priority;
 	}
 
-	~Thread_Pool() 
+	bool operator < (const Task& other) const 
 	{
-		exit = true;
+		return this->priority < other.priority;
+	}
 
-		for (auto & t : pool)
+	Status get_Status() const { return status; }
+
+	void start()
+	{
+		status = RUNNING;
+
+		if (status != CANCELED) 		
 		{
-			t.join ();
+			run();
 		}
+
+		status = FINISHED;
+	}
+
+	void cancel() 
+	{
+		if (status != FINISHED) status = CANCELED;
+	}
+
+	bool is_not_cancelled() const { return status != CANCELED; };	
+	bool is_cancelled() const { return status == CANCELED; };
+	bool has_not_finished() const { return status != FINISHED; };
+	bool has_finished() const { return status == FINISHED; };
+	bool is_waiting() const { return status == WAITING; };
+	bool is_not_waiting() const { return status != WAITING; };
+
+protected:
+
+	virtual void run () = 0;
+};
+
+class Task_Group : public Task 
+{
+	std::list< Task * > tasks;
+
+	Thread_Pool& thread_pool;
+
+public:
+
+	Task_Group(Thread_Pool& given_thread_pool) : thread_pool(given_thread_pool) 
+	{
+	}
+
+	void add_task(Task* task) 
+	{
+		if (this->is_waiting())
+		{
+			tasks.push_back(task);
+		}
+	}
+
+	void run() override
+	{
+		for (auto current_task = tasks.begin(); current_task != tasks.end(); ++current_task)
+		{
+			thread_pool.add_task(*current_task);
+
+			while ((*current_task)->has_not_finished())
+			{
+				std::this_thread::yield();
+			}
+		}
+	}
+};
+
+class Thread_Pool
+{
+	std::list< std::shared_ptr <std::thread>> threads;
+
+	std::queue< Task* > task_queue;
+
+	std::mutex task_queue_mutex;
+
+	bool running;
+
+	//std::vector< std::thread > pool;
+
+	//Cosas a mejorar, prioridad de tareas
+	//Priority queue
+	/*
+	
+	*/
+
+public:
+
+	Thread_Pool() 
+	{
+		running = false;
+
+		for (int i = 0; i < std::thread::hardware_concurrency(); i++)
+		{
+			threads.push_back(std::make_shared<std::thread>(thread_function, this));
+		}
+
+		running = true;
+	}
+
+	void stop()
+	{
+		if (running) 
+		{
+			running = false;
+
+			for (auto & t : threads) 
+			{
+				t->join();
+			}
+		}
+	}
+
+	void add_task(Task* task) 
+	{
+		std::lock_guard<std::mutex> lock(task_queue_mutex);
+
+		task_queue.push (task);
 	}
 
 private:
 
 	static void thread_function(Thread_Pool* thread_pool)
 	{
-		while (!thread_pool->exit)
+		while (!thread_pool->running)
 		{
+			Task* task;
 
+			// Hueco de sentencias para tener variables locales y que se destruyan
+			{
+				std::lock_guard<std::mutex> lock(thread_pool->task_queue_mutex);
+
+				do
+				{
+					task = nullptr;
+
+					if (not thread_pool->task_queue.empty())
+					{
+						task = thread_pool->task_queue.front();
+
+						thread_pool->task_queue.pop();
+					}
+
+				} 
+				while (task->is_cancelled());
+			}
+
+			if (task) 
+			{
+				task->start();
+			}
 		}
 	}
+
+/*
+ public:
+
+	Thread_Pool() : pool(std::thread::hardware_concurrency())
+	{
+		assert(pool.size() > 0);
+
+		running = false;
+	}
+
+	~Thread_Pool() 
+	{
+		running = true;
+
+		for (auto & t : pool)
+		{
+			t.join ();
+		}
+	}
+*/
 };

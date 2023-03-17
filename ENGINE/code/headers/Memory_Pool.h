@@ -7,7 +7,9 @@
 #include <queue>
 #include <mutex>
 
-class Incremental_Memory_Pool 
+/*
+* 
+* class Incremental_Memory_Pool 
 {
 public:
 	Incremental_Memory_Pool(size_t pool_size);
@@ -242,9 +244,10 @@ class Thread_Pool
 	
 	*/
 
+/*
 public:
 
-	Thread_Pool() 
+	Thread_Pool()
 	{
 		running = false;
 
@@ -258,22 +261,22 @@ public:
 
 	void stop()
 	{
-		if (running) 
+		if (running)
 		{
 			running = false;
 
-			for (auto & t : threads) 
+			for (auto& t : threads)
 			{
 				t->join();
 			}
 		}
 	}
 
-	void add_task(Task* task) 
+	void add_task(Task* task)
 	{
 		std::lock_guard<std::mutex> lock(task_queue_mutex);
 
-		task_queue.push (task);
+		task_queue.push(task);
 	}
 
 private:
@@ -299,35 +302,33 @@ private:
 						thread_pool->task_queue.pop();
 					}
 
-				} 
-				while (task->is_cancelled());
+				} while (task->is_cancelled());
 			}
 
-			if (task) 
+			if (task)
 			{
 				task->start();
 			}
 		}
 	}
 
-/*
  public:
 
-	Thread_Pool() : pool(std::thread::hardware_concurrency())
-	{
-		assert(pool.size() > 0);
+	 Thread_Pool() : pool(std::thread::hardware_concurrency())
+	 {
+		 assert(pool.size() > 0);
 
-		running = false;
-	}
+		 running = false;
+	 }
 
-	~Thread_Pool() 
-	{
-		running = true;
+	 ~Thread_Pool()
+	 {
+		 running = true;
 
-		for (auto & t : pool)
-		{
-			t.join ();
-		}
-	}
-*/
+		 for (auto& t : pool)
+		 {
+			 t.join();
+		 }
+	 }
 };
+*/

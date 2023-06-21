@@ -1,94 +1,59 @@
 #pragma once
 
-class Entity 
+#include "Message.h"
+#include "Components.h"
+
+#include "glm/glm.hpp"
+
+#include <map>
+#include <string>
+#include <memory>
+
+using namespace std;
+using namespace glm;
+
+namespace glt 
 {
-	Scene * scene;
+	class Model;
+}
 
-	Entity * parent = nullptr;
-
-	map< string, shared_ptr < Component > > components;
-
-	Transform_Component * transform;   // puntero al componente transform del mapa "componentes"
-									   // para acceder más rápidamente a él
-
-	// métodos get / set públicos
-
-	// el constructor añade directamente un componente transform
-};
-
-class Component 
+namespace Xohat 
 {
-protected:
+	class Scene;
 
-	Entity * owner;
-
-	// métodos get / set
-};
-
-class Transform_Component : public Component 
-{
-	Vec3 position;
-	Vec3 scale;
-	Vec3 euler_angles;
-
-public:
-
-	void set_position ();
-	void set_scale ();
-
-	mat4 get_matrix() const 
+	class Entity
 	{
-		mat4 transform_matrix;
+		Scene* scene;
 
-		//aplicar escala, rotación y translación
+		Entity* parent = nullptr;
 
-		if (owner->get_parent () != nullptr)
-			return owner->get_parent ()->get_transform()->get_matrix() * transform_matrix;
-		else
-			return transform_matrix;
-	}
-};
+		map< string, shared_ptr < Component > > components;
 
-class Mesh_Component : public Component 
-{
-	shared_ptr<glt::Model> model;
-};
+		Transform_Component* transform;   // puntero al componente transform del mapa "componentes"
+		// para acceder más rápidamente a él
 
-class Collider_Component : public Component 
-{
-	// colisiones
-};
+	public:
 
-class Controller 
-{
-public:
-	virtual void update(float t) = 0;
-};
-
-class Control_Component : public Component 
-{
-	Controller* controller;
-};
-
-class Racket_Controler : public Controller , public Message_Listener
-{
-public:
-	void update(Scene & scene, Entity & entitiy, float t) 
-	{
-		// preguntar a la escena por otras entidades
-		// mover entity
-		// etc.
-	}
-
-	void handle(const Message& m) 
-	{
-		if (m.id == "subir")
+		// el constructor añade directamente un componente Transform_Component
+		Entity()
 		{
-			//Mover transform component arriba
+			transform = new Transform_Component(); // Crea un nuevo objeto Transform_Component
 		}
-		else if (m.id == "bajar") 
+
+		~Entity()
 		{
-			//mover transform component abajo
+			delete transform; // Libera la memoria del objeto Transform_Component al destruir el objeto Entity
 		}
-	}
-};
+
+		// métodos get / set públicos
+		Entity* get_parent() const
+		{
+			return parent;
+		}
+
+		Transform_Component* get_transform() const
+		{
+			return transform;
+		}
+	};
+}

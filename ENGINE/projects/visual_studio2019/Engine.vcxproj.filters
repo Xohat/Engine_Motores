@@ -24,6 +24,12 @@
     <ClCompile Include="..\..\code\sources\WinMain.cpp">
       <Filter>Sources</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\code\sources\Component.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Input_Task.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\Window.h">
@@ -45,6 +51,15 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\headers\Message.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Timer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Components.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Input_task.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

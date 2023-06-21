@@ -1,16 +1,20 @@
-#include <Window.h>
-#include <Memory_Pool.h>
-	 
+#include "Window.h"
+#include "Scene.h"
+
+using namespace Xohat;
+
 int main()
 {
-	std::string name("Half life 3");
+	std::string name("Engine Motores");
 	//Chunked_Memory_Pool<4> testpool (100000);
-	Xohat::Window MainWindow(name, 1024, 768, false);
+	Window MainWindow(name, 1024, 768, false);
+
+	Scene scene(MainWindow);
+	scene.run();
+
+	//shared_ptr< Entity > entity;
+
 	/*
-	Scene scene(window);
-
-	shared_ptr< Entity > entity;
-
 	Racket_Controller controller;
 	scene->get_message_dispatcher()->register_listener (controller);
 
@@ -36,6 +40,6 @@ int main()
 	scene.run();
 	*/
 
-	while(true){}
+	//while (true) {}
 	return 0;
 }

@@ -1,35 +1,45 @@
 #pragma once
+
 #include "Task.h"
+#include "Timer.h"
+
 #include <cstddef>
+#include <list>
 
-//using std::
+using namespace std;
 
-class Kernel 
+namespace Xohat
 {
-	list < Task* > tasks;
-
-	bool exit;
-
-public:
-
-	void stop() 
+	class Kernel
 	{
-		exit = true;
-	}
+		list < Task* > tasks;
 
-	void run()
-	{
-		exit = false;
+		bool exit;
 
-		float elpased = 1.f / 60.f;
+	public:
 
-		while (!exit)
+		void add_task(Task* new_task) 
 		{
-			Timer timer;
-
-			for (auto task : tasks) task->run();
-
-			elapsed = timer.get_elapsed_seconds;
+			tasks.push_back(new_task);
 		}
-	}
-};
+
+		void stop()
+		{
+			exit = true;
+		}
+
+		void run()
+		{
+			exit = false;
+			Timer timer;
+			float elpased = 1.f / 60.f;
+
+			while (!exit)
+			{
+				for (auto task : tasks) task->run(0.016f);
+
+				float elapsed = timer.get_elapsed_seconds();
+			}
+		}
+	};
+}

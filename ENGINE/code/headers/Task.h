@@ -1,92 +1,62 @@
 #pragma once
 
-//Es como una interfaz
-class Task 
+namespace Xohat 
 {
-protected:
-
-	Scene* scene;
-
-public:
-
-	virtual void run(float t) = 0;
-};
-
-class Input_Task : public Task 
-{
-public:
-	// constructor
-	void run(float t) override 
+	//Es como una interfaz
+	class Task
 	{
-		Window & window scene->get_window();
+	public:
 
-		Event event;
+		virtual void run(float t) = 0;
+	};
 
-		while (window.poll(event) > 0) 
-		{
-			switch (event.type) 
-			{
-				case KEY_PRESSED:
-				{
-					switch (event.key.code) 
-					{
-						case ARROW_UP: 
-						{
-							Message message("subir");
-							scene->get_message_dispatcher()->send(message);
-							break;
-						}
-					}
+	//class Update_Task : public Task
+	//{
+	//public:
+	//	//constructor
+	//	void run(float t) override;
+	//};
 
-					break;
-				}
-			}
-		}
-	}
-};
+	//class Render_Task : public Task
+	//{
+	//	// list< shared_ptr< Mesh_Component > > meshes;
 
-class Update_Task : public Task
-{
-public:
-	//constructor
-	void run(float t) override;
-};
+	//	//glm::Render_Node renderer;
 
-class Render_Task : public Task
-{
-	list< shared_ptr< Mesh_Component > > meshes;
+	//public:
 
-	glt::Render_Node renderer;
+	//	//shared_ptr< Component > create_component();
 
-public:
+	//	/*
+	//	//constructor
+	//	void run(float t) override
+	//	{
+	//		for (auto& mesh : meshes)
+	//		{
+	//			mesh->model->set_transformation(mesh->owner->get_transform()->get_matrix());
+	//		}
 
-	shared_ptr< Component > create_component(?);
+	//		scene->get_window()->clear();
 
-	//constructor
-	void run(float t) override 
-	{
-		for (auto& mesh : meshes) 
-		{
-			mesh->model->set_transformation (mesh->owner->get_transform()->get_matrix ());
-		}
+	//		renderer->render();
 
-		scene->get_window()->clear();
+	//		scene->get_window()->swap_buffers();
+	//	}
+	//	*/
+	//};
 
-		renderer->render();
+	//class Control_Task : public Task
+	//{
+	//	// list< shared_ptr< Control_Component > > control_components;
 
-		scene->get_window()->swap_buffers();
-	}
-};
-
-class Control_Task : public Task 
-{
-	list< shared_ptr< Control_Component > > control_components;
-
-	void run(float t) override 
-	{
-		for (auto& component : control_components)
-		{
-			component->controller->update(*scene, component->owner, t);
-		}
-	}
-};
+	//	void run(float t) override
+	//	{
+	//		/*
+	//		for (auto& component : control_components)
+	//		{
+	//			component->controller->update(*scene, component->owner, t);
+	//		}
+	//		*/
+	//	}
+	//};
+}

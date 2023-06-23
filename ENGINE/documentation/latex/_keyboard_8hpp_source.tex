@@ -1,0 +1,59 @@
+\doxysection{Keyboard.\+hpp}
+\hypertarget{_keyboard_8hpp_source}{}\label{_keyboard_8hpp_source}\index{F:/Github/Engine\_Motores/ENGINE/code/headers/Keyboard.hpp@{F:/Github/Engine\_Motores/ENGINE/code/headers/Keyboard.hpp}}
+\mbox{\hyperlink{_keyboard_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ This\ is\ free\ code\ released\ into\ the\ public\ domain.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Drafted\ by\ Ángel\ in\ January\ 2019.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Use\ it\ at\ your\ own\ risk.\ It\ might\ have\ bugs.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ angel.rodriguez@esne.edu}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceengine}{engine}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classengine_1_1_keyboard}{Keyboard}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840}{Key\_Code}}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ab6d3c968c03986aa6e97f864580d7b6d}{KEY\_UNKOWN}},}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a813202ea60049f17bea0a68495c8c090}{KEY\_RETURN}},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9fb2da1eb15cafac3a8bd2b971a2e735}{KEY\_ESCAPE}},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ae6e93373ad95d120912ab237ee8f16de}{KEY\_BACKSPACE}},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840afabb79c12deeb272384770ba299b62e5}{KEY\_TAB}},}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a19430f279c5e4a8c1572f6ef72ba2bec}{KEY\_SPACE}},}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a4d0bcb4fbcb2ee8400389a9b4119ed66}{KEY\_A}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a1ff3be3f6f16413f1f6a57fcee7c8d14}{KEY\_B}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8c1b52cc738c6d9574223bec98f824bc}{KEY\_C}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ac25896a7682ce81fab3425afddfdbcc3}{KEY\_D}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a17c52d6f7860b875f36cdd2eb2cb3703}{KEY\_E}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a22167f4d1dd0bcca719caba04d3352d8}{KEY\_F}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ad042e859d0ae82f8b141d7e31e7e03a1}{KEY\_G}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a27c56152f89609cede5a9f2ef2cde2d1}{KEY\_H}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a3c6e607f8d4016e131c0c851ca80da61}{KEY\_I}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a41e486c6ad83043b4401cd3cfb01191b}{KEY\_J}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8ccbe4acb9dd8524335fe731d5eca291}{KEY\_K}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8bb451084b62b148b96ab0fceee034e6}{KEY\_L}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a0ffd63d587ce84fb6774daf2c1ba856e}{KEY\_M}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a636c29fbab2e25328914ee93cc89d875}{KEY\_N}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a3c21d6f8cd30ebce941f5b5f969cb8c0}{KEY\_O}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a2e1d1582d10c02d0f420e6825cae9e44}{KEY\_P}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a2a96cc3b9c0e6f5e1e3dedcdd9f91b83}{KEY\_Q}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a6fd89286f512a772741c99b6a2e7cb58}{KEY\_R}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a52f42fa6eb7ea03ae39a45247e90c40f}{KEY\_S}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ab36e4c51b9f1af31fac5bd5003b241f9}{KEY\_T}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9022c18a734f3e45d80a49c4d6d57147}{KEY\_U}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840afec7026a13197b54217459703ab5be7e}{KEY\_V}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a65ad465d11329e2d7a9b856edab286f9}{KEY\_W}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a14b23f59dff64238ddf14272a8573c8c}{KEY\_X}},\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9242f8be15a9c3efc0a351550957a9ae}{KEY\_Y}},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840af843a34cd3def77367c1595b4fc385c0}{KEY\_Z}},}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a69988026fb580e7849a84feec2557026}{KEY\_0}},}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9b921fef5a9ecbf7483b90381685b5d8}{KEY\_1}},}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a62f03dd70b18372b46db46891ee719f5}{KEY\_2}},}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ac89aabf057700feaa57bc7cb4489ad98}{KEY\_3}},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a750c07c07638a8c34850eb7786c429ce}{KEY\_4}},}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840aeffa8a7e57d3de1dff634edcc29760d3}{KEY\_5}},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ae0b75bf2d14996ce6602953136eec432}{KEY\_6}},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a04031e50f449fc390047a6ac33f0a2ba}{KEY\_7}},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a38b849f16bbd12569fb82caf9e195acd}{KEY\_8}},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a759e9186137f8671aa9ef8bbb0a93fa5}{KEY\_9}},}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840}{Key\_Code}}\ \mbox{\hyperlink{classengine_1_1_keyboard_a0b5cd8bbe99d9818309238ec5e76c1dc}{translate\_sdl\_key\_code}}\ (\textcolor{keywordtype}{int}\ sdl\_key\_code);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}}
+
+\end{DoxyCode}

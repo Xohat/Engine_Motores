@@ -1,0 +1,146 @@
+\doxysection{Ball\+\_\+\+Script Class Reference}
+\hypertarget{class_ball___script}{}\label{class_ball___script}\index{Ball\_Script@{Ball\_Script}}
+
+
+{\ttfamily \#include $<$Ball\+\_\+\+Script.\+h$>$}
+
+Inheritance diagram for Ball\+\_\+\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ball___script}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ball___script_ad39604d5398f58c045728068e3da586a}{set\+\_\+players}} (Entity \texorpdfstring{$\ast$}{*}given\+\_\+player1, Entity \texorpdfstring{$\ast$}{*}given\+\_\+player2)
+\begin{DoxyCompactList}\small\item\em Configura las referencias a los jugadores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball___script_abe5c5927f7f60efd346cd3d866d715d9}{set\+\_\+speed}} (glm\+::vec3 new\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em Se configura la velocidad con la que que se mueve. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball___script_a458ad3a7f9ef6746a7976c5655fffddc}{check\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Se actualiza la posición actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball___script_a38e44436c0530adcda97700f07cce622}{update}} (float t) override
+\begin{DoxyCompactList}\small\item\em El update ocurre una vez por fotograma y revisa, primero la posición actual del jugador, luego le añade el movimiento en base a la velocidad y finalmente mira si ha llegado a los límites para cambiar de sentido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball___script_a72901e433be528070e05387d7976a583}{check\+\_\+bounce}} ()
+\begin{DoxyCompactList}\small\item\em Se comprueba si se ha llegado al límite de uno de los jugadores para forzar un rebote. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Entity \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_ball___script_ad89552328271066b26f50d85f3832785}{player1}}
+\item 
+Entity \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_ball___script_a89de64a208db4cbf45c4bf7603d2de28}{player2}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_ball___script_a34ec807f8f58da15831391fe927519fc}{curr\+\_\+position}}
+\begin{DoxyCompactList}\small\item\em Posición actual. \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{class_ball___script_a60eed5593135723354df991e94525779}{speed\+\_\+vector}} = \{10, 2, 0\}
+\begin{DoxyCompactList}\small\item\em Velocidad con la que se mueve. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ball___script_a72901e433be528070e05387d7976a583}\label{class_ball___script_a72901e433be528070e05387d7976a583} 
+\index{Ball\_Script@{Ball\_Script}!check\_bounce@{check\_bounce}}
+\index{check\_bounce@{check\_bounce}!Ball\_Script@{Ball\_Script}}
+\doxysubsubsection{\texorpdfstring{check\_bounce()}{check\_bounce()}}
+{\footnotesize\ttfamily void Ball\+\_\+\+Script\+::check\+\_\+bounce (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Se comprueba si se ha llegado al límite de uno de los jugadores para forzar un rebote. 
+
+\Hypertarget{class_ball___script_a458ad3a7f9ef6746a7976c5655fffddc}\label{class_ball___script_a458ad3a7f9ef6746a7976c5655fffddc} 
+\index{Ball\_Script@{Ball\_Script}!check\_position@{check\_position}}
+\index{check\_position@{check\_position}!Ball\_Script@{Ball\_Script}}
+\doxysubsubsection{\texorpdfstring{check\_position()}{check\_position()}}
+{\footnotesize\ttfamily void Ball\+\_\+\+Script\+::check\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Se actualiza la posición actual. 
+
+\Hypertarget{class_ball___script_ad39604d5398f58c045728068e3da586a}\label{class_ball___script_ad39604d5398f58c045728068e3da586a} 
+\index{Ball\_Script@{Ball\_Script}!set\_players@{set\_players}}
+\index{set\_players@{set\_players}!Ball\_Script@{Ball\_Script}}
+\doxysubsubsection{\texorpdfstring{set\_players()}{set\_players()}}
+{\footnotesize\ttfamily void Ball\+\_\+\+Script\+::set\+\_\+players (\begin{DoxyParamCaption}\item[{Entity \texorpdfstring{$\ast$}{*}}]{given\+\_\+player1,  }\item[{Entity \texorpdfstring{$\ast$}{*}}]{given\+\_\+player2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configura las referencias a los jugadores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+player1} & \\
+\hline
+{\em given\+\_\+player2} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ball___script_abe5c5927f7f60efd346cd3d866d715d9}\label{class_ball___script_abe5c5927f7f60efd346cd3d866d715d9} 
+\index{Ball\_Script@{Ball\_Script}!set\_speed@{set\_speed}}
+\index{set\_speed@{set\_speed}!Ball\_Script@{Ball\_Script}}
+\doxysubsubsection{\texorpdfstring{set\_speed()}{set\_speed()}}
+{\footnotesize\ttfamily void Ball\+\_\+\+Script\+::set\+\_\+speed (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{new\+\_\+speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Se configura la velocidad con la que que se mueve. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+speed} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ball___script_a38e44436c0530adcda97700f07cce622}\label{class_ball___script_a38e44436c0530adcda97700f07cce622} 
+\index{Ball\_Script@{Ball\_Script}!update@{update}}
+\index{update@{update}!Ball\_Script@{Ball\_Script}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Ball\+\_\+\+Script\+::update (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+El update ocurre una vez por fotograma y revisa, primero la posición actual del jugador, luego le añade el movimiento en base a la velocidad y finalmente mira si ha llegado a los límites para cambiar de sentido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_ball___script_a34ec807f8f58da15831391fe927519fc}\label{class_ball___script_a34ec807f8f58da15831391fe927519fc} 
+\index{Ball\_Script@{Ball\_Script}!curr\_position@{curr\_position}}
+\index{curr\_position@{curr\_position}!Ball\_Script@{Ball\_Script}}
+\doxysubsubsection{\texorpdfstring{curr\_position}{curr\_position}}
+{\footnotesize\ttfamily glm\+::vec3 Ball\+\_\+\+Script\+::curr\+\_\+position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Posición actual. 
+
+\Hypertarget{class_ball___script_ad89552328271066b26f50d85f3832785}\label{class_ball___script_ad89552328271066b26f50d85f3832785} 
+\index{Ball\_Script@{Ball\_Script}!player1@{player1}}
+\index{player1@{player1}!Ball\_Script@{Ball\_Script}}
+\doxysubsubsection{\texorpdfstring{player1}{player1}}
+{\footnotesize\ttfamily Entity\texorpdfstring{$\ast$}{*} Ball\+\_\+\+Script\+::player1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_ball___script_a89de64a208db4cbf45c4bf7603d2de28}\label{class_ball___script_a89de64a208db4cbf45c4bf7603d2de28} 
+\index{Ball\_Script@{Ball\_Script}!player2@{player2}}
+\index{player2@{player2}!Ball\_Script@{Ball\_Script}}
+\doxysubsubsection{\texorpdfstring{player2}{player2}}
+{\footnotesize\ttfamily Entity\texorpdfstring{$\ast$}{*} Ball\+\_\+\+Script\+::player2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_ball___script_a60eed5593135723354df991e94525779}\label{class_ball___script_a60eed5593135723354df991e94525779} 
+\index{Ball\_Script@{Ball\_Script}!speed\_vector@{speed\_vector}}
+\index{speed\_vector@{speed\_vector}!Ball\_Script@{Ball\_Script}}
+\doxysubsubsection{\texorpdfstring{speed\_vector}{speed\_vector}}
+{\footnotesize\ttfamily glm\+::vec3 Ball\+\_\+\+Script\+::speed\+\_\+vector = \{10, 2, 0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Velocidad con la que se mueve. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+DEMO/code/\mbox{\hyperlink{_ball___script_8h}{Ball\+\_\+\+Script.\+h}}\end{DoxyCompactItemize}

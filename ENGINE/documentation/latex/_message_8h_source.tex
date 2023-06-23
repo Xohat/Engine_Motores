@@ -1,0 +1,77 @@
+\doxysection{Message.\+h}
+\hypertarget{_message_8h_source}{}\label{_message_8h_source}\index{F:/Github/Engine\_Motores/ENGINE/code/headers/Message.h@{F:/Github/Engine\_Motores/ENGINE/code/headers/Message.h}}
+\mbox{\hyperlink{_message_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Copyright\ (c)\ 2023\ Arturo\ /\ Xohat}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ arturovilarc@gmail.com\ /\ xohatlatte@gmail.com}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ 2023.05\ -\/\ 2023.06}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}glm/glm.hpp"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_xohat}{Xohat}}\ }
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_xohat_1_1_message}{Message}}}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{struct_xohat_1_1_message_ac273a03c9bf71c08d8feff802fdcd3eb}{id}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_xohat_1_1_message_a149bb638ffdbd3bd4fa4f88a1e9cf467}{Message}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_xohat_1_1_message_a4405432856f2db05093219fa8ed53429}{Message}}(\textcolor{keywordtype}{string}\ given\_id)\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ given\_id;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_xohat_1_1_message___listener}{Message\_Listener}}}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_xohat_1_1_message___listener_ac9b643843bd6f540072525a3113960b3}{received}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_message___listener_aa96621bcdb93b9893fdedcb51d7fc7ac}{handle}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_xohat_1_1_message}{Message}}\&\ m)\ =\ 0;}
+\DoxyCodeLine{00051\ \ \ \ \ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_xohat_1_1_message___dispatcher}{Message\_Dispatcher}}}
+\DoxyCodeLine{00058\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ map<\ string,\ list<\ Message\_Listener*\ >\ >\ \mbox{\hyperlink{class_xohat_1_1_message___dispatcher_aa10cc481efa269d64faff132f38ff4d7}{listeners}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_message___dispatcher_a0e9144656a4827e33cd83a85bea18369}{register\_listener}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ message\_id,\ \mbox{\hyperlink{class_xohat_1_1_message___listener}{Message\_Listener}}*\ listener)}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listener)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_message___dispatcher_aa10cc481efa269d64faff132f38ff4d7}{listeners}}[message\_id].push\_back(listener);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_message___dispatcher_a6f61be85171f07083c2d09cf30c84575}{send}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_xohat_1_1_message}{Message}}\&\ messsage)}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ handlers\ =\ \mbox{\hyperlink{class_xohat_1_1_message___dispatcher_aa10cc481efa269d64faff132f38ff4d7}{listeners}}.find(messsage.\mbox{\hyperlink{struct_xohat_1_1_message_ac273a03c9bf71c08d8feff802fdcd3eb}{id}});}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (handlers\ !=\ \mbox{\hyperlink{class_xohat_1_1_message___dispatcher_aa10cc481efa269d64faff132f38ff4d7}{listeners}}.end())}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ handler\ :\ handlers-\/>second)}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ handler-\/>handle(messsage);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}meesage\ with\ ID\ =\ "{}}\ <<\ messsage.\mbox{\hyperlink{struct_xohat_1_1_message_ac273a03c9bf71c08d8feff802fdcd3eb}{id}}\ <<\ \textcolor{stringliteral}{"{}\ lost!"{}}\ <<\ endl;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \};}
+\DoxyCodeLine{00099\ \}}
+
+\end{DoxyCode}

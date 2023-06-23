@@ -1,0 +1,79 @@
+\doxysection{Xohat\+::Message\+\_\+\+Dispatcher Class Reference}
+\hypertarget{class_xohat_1_1_message___dispatcher}{}\label{class_xohat_1_1_message___dispatcher}\index{Xohat::Message\_Dispatcher@{Xohat::Message\_Dispatcher}}
+
+
+Encargado de transmitir mensajes, luego los \doxylink{class_xohat_1_1_message___listener}{Message\+\_\+\+Listener} tienen que suscrbirse al flujo de información que proporciona.  
+
+
+
+
+{\ttfamily \#include $<$Message.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_xohat_1_1_message___dispatcher_a0e9144656a4827e33cd83a85bea18369}{register\+\_\+listener}} (const string \&message\+\_\+id, \mbox{\hyperlink{class_xohat_1_1_message___listener}{Message\+\_\+\+Listener}} \texorpdfstring{$\ast$}{*}listener)
+\begin{DoxyCompactList}\small\item\em Añade al listener a escuchar, buscando una ID concreta dentro del flujo de información. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_message___dispatcher_a6f61be85171f07083c2d09cf30c84575}{send}} (const \mbox{\hyperlink{struct_xohat_1_1_message}{Message}} \&messsage)
+\begin{DoxyCompactList}\small\item\em Envia un mensaje al flujo de información. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, list$<$ \mbox{\hyperlink{class_xohat_1_1_message___listener}{Message\+\_\+\+Listener}} \texorpdfstring{$\ast$}{*} $>$ $>$ \mbox{\hyperlink{class_xohat_1_1_message___dispatcher_aa10cc481efa269d64faff132f38ff4d7}{listeners}}
+\begin{DoxyCompactList}\small\item\em Lista de listeners. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encargado de transmitir mensajes, luego los \doxylink{class_xohat_1_1_message___listener}{Message\+\_\+\+Listener} tienen que suscrbirse al flujo de información que proporciona. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_xohat_1_1_message___dispatcher_a0e9144656a4827e33cd83a85bea18369}\label{class_xohat_1_1_message___dispatcher_a0e9144656a4827e33cd83a85bea18369} 
+\index{Xohat::Message\_Dispatcher@{Xohat::Message\_Dispatcher}!register\_listener@{register\_listener}}
+\index{register\_listener@{register\_listener}!Xohat::Message\_Dispatcher@{Xohat::Message\_Dispatcher}}
+\doxysubsubsection{\texorpdfstring{register\_listener()}{register\_listener()}}
+{\footnotesize\ttfamily void Xohat\+::\+Message\+\_\+\+Dispatcher\+::register\+\_\+listener (\begin{DoxyParamCaption}\item[{const string \&}]{message\+\_\+id,  }\item[{\mbox{\hyperlink{class_xohat_1_1_message___listener}{Message\+\_\+\+Listener}} \texorpdfstring{$\ast$}{*}}]{listener }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Añade al listener a escuchar, buscando una ID concreta dentro del flujo de información. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+id} & \\
+\hline
+{\em listener} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_message___dispatcher_a6f61be85171f07083c2d09cf30c84575}\label{class_xohat_1_1_message___dispatcher_a6f61be85171f07083c2d09cf30c84575} 
+\index{Xohat::Message\_Dispatcher@{Xohat::Message\_Dispatcher}!send@{send}}
+\index{send@{send}!Xohat::Message\_Dispatcher@{Xohat::Message\_Dispatcher}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily void Xohat\+::\+Message\+\_\+\+Dispatcher\+::send (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_xohat_1_1_message}{Message}} \&}]{messsage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Envia un mensaje al flujo de información. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em messsage} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_xohat_1_1_message___dispatcher_aa10cc481efa269d64faff132f38ff4d7}\label{class_xohat_1_1_message___dispatcher_aa10cc481efa269d64faff132f38ff4d7} 
+\index{Xohat::Message\_Dispatcher@{Xohat::Message\_Dispatcher}!listeners@{listeners}}
+\index{listeners@{listeners}!Xohat::Message\_Dispatcher@{Xohat::Message\_Dispatcher}}
+\doxysubsubsection{\texorpdfstring{listeners}{listeners}}
+{\footnotesize\ttfamily map$<$ string, list$<$ \mbox{\hyperlink{class_xohat_1_1_message___listener}{Message\+\_\+\+Listener}}\texorpdfstring{$\ast$}{*} $>$ $>$ Xohat\+::\+Message\+\_\+\+Dispatcher\+::listeners\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de listeners. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\mbox{\hyperlink{_message_8h}{Message.\+h}}\end{DoxyCompactItemize}

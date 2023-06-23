@@ -1,0 +1,260 @@
+\doxysection{Xohat\+::Scene Class Reference}
+\hypertarget{class_xohat_1_1_scene}{}\label{class_xohat_1_1_scene}\index{Xohat::Scene@{Xohat::Scene}}
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_scene_ab56da8b945177d636ff6cdecfb7a0bb8}{Scene}} (\mbox{\hyperlink{class_xohat_1_1_window}{Window}} \&given\+\_\+window)
+\begin{DoxyCompactList}\small\item\em Constructor de escena, define toda la configración básica de la escena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_scene_ad471e5bbaceed6c46d6b7241009e1561}{create\+\_\+entity}} (\mbox{\hyperlink{class_xohat_1_1_render___task}{Render\+\_\+\+Task}} \&render\+\_\+task, string entity\+\_\+name, glm\+::vec3 position, glm\+::vec3 scale)
+\begin{DoxyCompactList}\small\item\em Creador de entities genéricas de tipo cubo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_scene_a6dfb34861370b045fd2b39b37a520aef}{add\+\_\+update\+\_\+component\+\_\+to\+\_\+entity}} (string entity\+\_\+id, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_update___component}{Update\+\_\+\+Component}} $>$ update\+\_\+c)
+\begin{DoxyCompactList}\small\item\em Como su nombre indica añade el componente de update a la entidad de ID especificada para el mapa de entidades. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_window}{Window}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_scene_a70db3967dd6d35f44473626032cc8f70}{get\+\_\+window}} () const
+\begin{DoxyCompactList}\small\item\em Getter de \doxylink{class_xohat_1_1_window}{Window}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_message___dispatcher}{Message\+\_\+\+Dispatcher}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_scene_a28a1c74c454560fcfc55609569c53bd6}{get\+\_\+dispatcher}} ()
+\begin{DoxyCompactList}\small\item\em Getter de message\+\_\+dispatcher. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_scene_a5b71b7a09e44dfbf960736f126130bb2}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Ciclo para cerrar la escena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_scene_a0b08ff0149687c8ec16e328d074a598a}{run}} ()
+\begin{DoxyCompactList}\small\item\em Ciclo de tasks, definido en mayor profundidad dentro de kernel.\+run. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_scene_a3b65e7ae76a34a1fffcdd0c599b4bac7}{add\+\_\+entity}} (string ID, shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} $>$ entity\+\_\+to\+\_\+add)
+\begin{DoxyCompactList}\small\item\em Añade una entidad nueva al array de entidades con una ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_input___task}{Input\+\_\+\+Task}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_scene_a37a449e8266cd566e9cd4c51150c1973}{get\+\_\+input\+\_\+task}} ()
+\begin{DoxyCompactList}\small\item\em Getter de input task, usado para la recepcion de mensajes en el main del proyecto de Sandbox. \end{DoxyCompactList}\item 
+map$<$ string, shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} $>$ $>$ \mbox{\hyperlink{class_xohat_1_1_scene_a4c664ace87e161113ec0d3d4eac69883}{get\+\_\+entity}} ()
+\begin{DoxyCompactList}\small\item\em Getter de mapa de entidades. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_kernel}{Kernel}} \mbox{\hyperlink{class_xohat_1_1_scene_af82878bede1af0998f8bb540e64225e3}{kernel}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_xohat_1_1_kernel}{Kernel} encargado del manejo del sistema de tasks. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_input___task}{Input\+\_\+\+Task}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_scene_a138ac61b1a756f47c9e780e7cad1e79b}{i\+\_\+task}}
+\begin{DoxyCompactList}\small\item\em Tasks. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_render___task}{Render\+\_\+\+Task}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_scene_a6c9db5a6cffce8905cd22fc86de3ee13}{r\+\_\+task}}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_update__task}{Update\+\_\+task}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_scene_ac258e7c8323eb2cee9e5385724640143}{u\+\_\+task}}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_message___dispatcher}{Message\+\_\+\+Dispatcher}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_scene_a3b763784ec8697b782b1a8d2682ae728}{message\+\_\+dispatcher}}
+\begin{DoxyCompactList}\small\item\em Central de mensajes, donde se mandan todos y luego al gente se suscribe para recibirlos. \end{DoxyCompactList}\item 
+map$<$ string, shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} $>$ $>$ \mbox{\hyperlink{class_xohat_1_1_scene_a091e8c22bcf6e7284e7c509787246268}{entities}}
+\begin{DoxyCompactList}\small\item\em Mapa de entidades. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_window}{Window}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_scene_ad1c0a2e9cd862d5f1bcf82c3edd467e3}{window}}
+\begin{DoxyCompactList}\small\item\em Referencia a la ventana para poder tener una escena donde se define la escena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_xohat_1_1_scene_ab56da8b945177d636ff6cdecfb7a0bb8}\label{class_xohat_1_1_scene_ab56da8b945177d636ff6cdecfb7a0bb8} 
+\index{Xohat::Scene@{Xohat::Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Xohat\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_xohat_1_1_window}{Window}} \&}]{given\+\_\+window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de escena, define toda la configración básica de la escena. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_xohat_1_1_scene_a3b65e7ae76a34a1fffcdd0c599b4bac7}\label{class_xohat_1_1_scene_a3b65e7ae76a34a1fffcdd0c599b4bac7} 
+\index{Xohat::Scene@{Xohat::Scene}!add\_entity@{add\_entity}}
+\index{add\_entity@{add\_entity}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{add\_entity()}{add\_entity()}}
+{\footnotesize\ttfamily void Xohat\+::\+Scene\+::add\+\_\+entity (\begin{DoxyParamCaption}\item[{string}]{ID,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} $>$}]{entity\+\_\+to\+\_\+add }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Añade una entidad nueva al array de entidades con una ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em entity\+\_\+to\+\_\+add} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_scene_a6dfb34861370b045fd2b39b37a520aef}\label{class_xohat_1_1_scene_a6dfb34861370b045fd2b39b37a520aef} 
+\index{Xohat::Scene@{Xohat::Scene}!add\_update\_component\_to\_entity@{add\_update\_component\_to\_entity}}
+\index{add\_update\_component\_to\_entity@{add\_update\_component\_to\_entity}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{add\_update\_component\_to\_entity()}{add\_update\_component\_to\_entity()}}
+{\footnotesize\ttfamily void Xohat\+::\+Scene\+::add\+\_\+update\+\_\+component\+\_\+to\+\_\+entity (\begin{DoxyParamCaption}\item[{string}]{entity\+\_\+id,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_update___component}{Update\+\_\+\+Component}} $>$}]{update\+\_\+c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Como su nombre indica añade el componente de update a la entidad de ID especificada para el mapa de entidades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+\_\+id} & \\
+\hline
+{\em update\+\_\+c} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_scene_ad471e5bbaceed6c46d6b7241009e1561}\label{class_xohat_1_1_scene_ad471e5bbaceed6c46d6b7241009e1561} 
+\index{Xohat::Scene@{Xohat::Scene}!create\_entity@{create\_entity}}
+\index{create\_entity@{create\_entity}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{create\_entity()}{create\_entity()}}
+{\footnotesize\ttfamily void Xohat\+::\+Scene\+::create\+\_\+entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_xohat_1_1_render___task}{Render\+\_\+\+Task}} \&}]{render\+\_\+task,  }\item[{string}]{entity\+\_\+name,  }\item[{glm\+::vec3}]{position,  }\item[{glm\+::vec3}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creador de entities genéricas de tipo cubo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+\_\+task} & \\
+\hline
+{\em entity\+\_\+name} & \\
+\hline
+{\em position} & \\
+\hline
+{\em scale} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_scene_a28a1c74c454560fcfc55609569c53bd6}\label{class_xohat_1_1_scene_a28a1c74c454560fcfc55609569c53bd6} 
+\index{Xohat::Scene@{Xohat::Scene}!get\_dispatcher@{get\_dispatcher}}
+\index{get\_dispatcher@{get\_dispatcher}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{get\_dispatcher()}{get\_dispatcher()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_message___dispatcher}{Message\+\_\+\+Dispatcher}} \texorpdfstring{$\ast$}{*} Xohat\+::\+Scene\+::get\+\_\+dispatcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de message\+\_\+dispatcher. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_scene_a4c664ace87e161113ec0d3d4eac69883}\label{class_xohat_1_1_scene_a4c664ace87e161113ec0d3d4eac69883} 
+\index{Xohat::Scene@{Xohat::Scene}!get\_entity@{get\_entity}}
+\index{get\_entity@{get\_entity}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{get\_entity()}{get\_entity()}}
+{\footnotesize\ttfamily map$<$ string, shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} $>$ $>$ Xohat\+::\+Scene\+::get\+\_\+entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de mapa de entidades. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_scene_a37a449e8266cd566e9cd4c51150c1973}\label{class_xohat_1_1_scene_a37a449e8266cd566e9cd4c51150c1973} 
+\index{Xohat::Scene@{Xohat::Scene}!get\_input\_task@{get\_input\_task}}
+\index{get\_input\_task@{get\_input\_task}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{get\_input\_task()}{get\_input\_task()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_input___task}{Input\+\_\+\+Task}} \texorpdfstring{$\ast$}{*} Xohat\+::\+Scene\+::get\+\_\+input\+\_\+task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de input task, usado para la recepcion de mensajes en el main del proyecto de Sandbox. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_scene_a70db3967dd6d35f44473626032cc8f70}\label{class_xohat_1_1_scene_a70db3967dd6d35f44473626032cc8f70} 
+\index{Xohat::Scene@{Xohat::Scene}!get\_window@{get\_window}}
+\index{get\_window@{get\_window}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{get\_window()}{get\_window()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_window}{Window}} \texorpdfstring{$\ast$}{*} Xohat\+::\+Scene\+::get\+\_\+window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de \doxylink{class_xohat_1_1_window}{Window}. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_scene_a0b08ff0149687c8ec16e328d074a598a}\label{class_xohat_1_1_scene_a0b08ff0149687c8ec16e328d074a598a} 
+\index{Xohat::Scene@{Xohat::Scene}!run@{run}}
+\index{run@{run}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Xohat\+::\+Scene\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ciclo de tasks, definido en mayor profundidad dentro de kernel.\+run. 
+
+\Hypertarget{class_xohat_1_1_scene_a5b71b7a09e44dfbf960736f126130bb2}\label{class_xohat_1_1_scene_a5b71b7a09e44dfbf960736f126130bb2} 
+\index{Xohat::Scene@{Xohat::Scene}!stop@{stop}}
+\index{stop@{stop}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Xohat\+::\+Scene\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ciclo para cerrar la escena. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_xohat_1_1_scene_a091e8c22bcf6e7284e7c509787246268}\label{class_xohat_1_1_scene_a091e8c22bcf6e7284e7c509787246268} 
+\index{Xohat::Scene@{Xohat::Scene}!entities@{entities}}
+\index{entities@{entities}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{entities}{entities}}
+{\footnotesize\ttfamily map$<$ string, shared\+\_\+ptr$<$\mbox{\hyperlink{class_xohat_1_1_entity}{Entity}}$>$ $>$ Xohat\+::\+Scene\+::entities\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mapa de entidades. 
+
+~\newline
+ \Hypertarget{class_xohat_1_1_scene_a138ac61b1a756f47c9e780e7cad1e79b}\label{class_xohat_1_1_scene_a138ac61b1a756f47c9e780e7cad1e79b} 
+\index{Xohat::Scene@{Xohat::Scene}!i\_task@{i\_task}}
+\index{i\_task@{i\_task}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{i\_task}{i\_task}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_input___task}{Input\+\_\+\+Task}}\texorpdfstring{$\ast$}{*} Xohat\+::\+Scene\+::i\+\_\+task\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tasks. 
+
+\Hypertarget{class_xohat_1_1_scene_af82878bede1af0998f8bb540e64225e3}\label{class_xohat_1_1_scene_af82878bede1af0998f8bb540e64225e3} 
+\index{Xohat::Scene@{Xohat::Scene}!kernel@{kernel}}
+\index{kernel@{kernel}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{kernel}{kernel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_kernel}{Kernel}} Xohat\+::\+Scene\+::kernel\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_xohat_1_1_kernel}{Kernel} encargado del manejo del sistema de tasks. 
+
+\Hypertarget{class_xohat_1_1_scene_a3b763784ec8697b782b1a8d2682ae728}\label{class_xohat_1_1_scene_a3b763784ec8697b782b1a8d2682ae728} 
+\index{Xohat::Scene@{Xohat::Scene}!message\_dispatcher@{message\_dispatcher}}
+\index{message\_dispatcher@{message\_dispatcher}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{message\_dispatcher}{message\_dispatcher}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_message___dispatcher}{Message\+\_\+\+Dispatcher}}\texorpdfstring{$\ast$}{*} Xohat\+::\+Scene\+::message\+\_\+dispatcher\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Central de mensajes, donde se mandan todos y luego al gente se suscribe para recibirlos. 
+
+\Hypertarget{class_xohat_1_1_scene_a6c9db5a6cffce8905cd22fc86de3ee13}\label{class_xohat_1_1_scene_a6c9db5a6cffce8905cd22fc86de3ee13} 
+\index{Xohat::Scene@{Xohat::Scene}!r\_task@{r\_task}}
+\index{r\_task@{r\_task}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{r\_task}{r\_task}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_render___task}{Render\+\_\+\+Task}}\texorpdfstring{$\ast$}{*} Xohat\+::\+Scene\+::r\+\_\+task\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_xohat_1_1_scene_ac258e7c8323eb2cee9e5385724640143}\label{class_xohat_1_1_scene_ac258e7c8323eb2cee9e5385724640143} 
+\index{Xohat::Scene@{Xohat::Scene}!u\_task@{u\_task}}
+\index{u\_task@{u\_task}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{u\_task}{u\_task}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_update__task}{Update\+\_\+task}}\texorpdfstring{$\ast$}{*} Xohat\+::\+Scene\+::u\+\_\+task\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_xohat_1_1_scene_ad1c0a2e9cd862d5f1bcf82c3edd467e3}\label{class_xohat_1_1_scene_ad1c0a2e9cd862d5f1bcf82c3edd467e3} 
+\index{Xohat::Scene@{Xohat::Scene}!window@{window}}
+\index{window@{window}!Xohat::Scene@{Xohat::Scene}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_window}{Window}}\texorpdfstring{$\ast$}{*} Xohat\+::\+Scene\+::window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referencia a la ventana para poder tener una escena donde se define la escena. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\mbox{\hyperlink{_scene_8h}{Scene.\+h}}\end{DoxyCompactItemize}

@@ -13,54 +13,117 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Headers\Internal">
+      <UniqueIdentifier>{625173fc-977b-4905-b356-0afe7ee1386d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\internal">
+      <UniqueIdentifier>{fccdcc87-9189-4d95-afcb-591f16f05923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Components">
+      <UniqueIdentifier>{89bea039-f956-4c6e-bff6-3ae03e987c6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Tasks">
+      <UniqueIdentifier>{06ecb5e8-aefe-4977-86de-db6a07eda25b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Basic">
+      <UniqueIdentifier>{095fb1a4-0228-40b7-adfa-f089c8d17d89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tasks">
+      <UniqueIdentifier>{be081abb-4912-489f-9ca0-03f9ccbd3354}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Basic">
+      <UniqueIdentifier>{57508adb-ac0f-4c85-a4bd-9711351ab7ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Component">
+      <UniqueIdentifier>{83ca4d90-33ba-43f2-ba98-babde95a1d46}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\code\sources\dummy.cpp">
-      <Filter>Sources</Filter>
+    <ClCompile Include="..\..\code\sources\initialize.cpp">
+      <Filter>Sources\internal</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\code\sources\Window.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\code\sources\WinMain.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\code\sources\Component.cpp">
-      <Filter>Sources</Filter>
+    <ClCompile Include="..\..\code\sources\finalize.cpp">
+      <Filter>Sources\internal</Filter>
     </ClCompile>
     <ClCompile Include="..\..\code\sources\Input_Task.cpp">
-      <Filter>Sources</Filter>
+      <Filter>Sources\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Render_Task.cpp">
+      <Filter>Sources\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Keyboard.cpp">
+      <Filter>Sources\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Sample_Renderer.cpp">
+      <Filter>Sources\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Mesh_Component.cpp">
+      <Filter>Sources\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Transform_Component.cpp">
+      <Filter>Sources\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Window.cpp">
+      <Filter>Sources\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\WinMain.cpp">
+      <Filter>Sources\Basic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\code\headers\Window.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\headers\Memory_Pool.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\code\headers\Entity.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\headers\Scene.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\headers\Kernel.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\headers\Task.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\headers\Message.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Timer.h">
-      <Filter>Headers</Filter>
+    <ClInclude Include="..\..\code\headers\internal\declarations.hpp">
+      <Filter>Headers\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\internal\initialize.hpp">
+      <Filter>Headers\Internal</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\headers\Components.h">
-      <Filter>Headers</Filter>
+      <Filter>Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Task.h">
+      <Filter>Headers\Tasks</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\headers\Input_task.h">
+      <Filter>Headers\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Kernel.h">
+      <Filter>Headers\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Scene.h">
+      <Filter>Headers\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Timer.h">
+      <Filter>Headers\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Window.h">
+      <Filter>Headers\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Mesh_Component.h">
+      <Filter>Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Render_Task.h">
+      <Filter>Headers\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Transform_Component.h">
+      <Filter>Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Sample_Renderer.hpp">
       <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Keyboard.hpp">
+      <Filter>Headers\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Update_task.h">
+      <Filter>Headers\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Update_Component.h">
+      <Filter>Headers\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

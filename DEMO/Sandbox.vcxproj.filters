@@ -15,8 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="code\Main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\Ball_Script.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="code\Player_Listener.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="code\Player1_Controller.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="code\Player2_Controller.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

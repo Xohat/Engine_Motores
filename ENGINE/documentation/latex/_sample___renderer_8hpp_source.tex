@@ -1,0 +1,43 @@
+\doxysection{Sample\+\_\+\+Renderer.\+hpp}
+\hypertarget{_sample___renderer_8hpp_source}{}\label{_sample___renderer_8hpp_source}\index{F:/Github/Engine\_Motores/ENGINE/code/headers/Sample\_Renderer.hpp@{F:/Github/Engine\_Motores/ENGINE/code/headers/Sample\_Renderer.hpp}}
+\mbox{\hyperlink{_sample___renderer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ This\ is\ free\ code\ released\ into\ the\ public\ domain.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Drafted\ by\ Ángel\ in\ January\ 2019.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Use\ it\ at\ your\ own\ risk.\ It\ might\ have\ bugs.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ angel.rodriguez@esne.edu}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_window_8h}{Window.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}internal/declarations.hpp"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceengine}{engine}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classengine_1_1_sample___renderer}{Sample\_Renderer}}}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ crea\ un\ puntero\ a\ Render\_Node\ porque\ al\ usar\ una\ declaración\ adelantada}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ para\ no\ exportar\ dependencias\ con\ esta\ cabecera,\ solo\ se\ pueden\ definir}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ punteros\ o\ referencias\ a\ los\ tipos\ declarados\ de\ modo\ adelantado.}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::unique\_ptr<\ glt::Render\_Node\ >\ \mbox{\hyperlink{classengine_1_1_sample___renderer_a2c73d03c5219fc9beb7a43f91f0cba41}{renderer}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_window}{Xohat::Window}}\ *\ \mbox{\hyperlink{classengine_1_1_sample___renderer_aa9c1f0b37e4173d037e9a53b612b4d71}{window}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_sample___renderer_ac758d6597bf03fabf3f737d54251f88f}{Sample\_Renderer}}(\mbox{\hyperlink{class_xohat_1_1_window}{Xohat::Window}}\ \&\ given\_window);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \mbox{\hyperlink{classengine_1_1_sample___renderer_ae34042e1a9a68682f8705b8ac3975cd3}{\string~Sample\_Renderer}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classengine_1_1_sample___renderer_ae667463d7927cd59f09c5e27c7323d61}{render}}\ ();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}

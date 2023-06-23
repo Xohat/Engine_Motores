@@ -1,62 +1,24 @@
+/**
+* @file Task.h
+* @brief Padre de todos las clases llamadas Algo_task
+* @author Arturo Vilar Carretero
+*/
+
+// Copyright (c) 2023 Arturo / Xohat
+// arturovilarc@gmail.com / xohatlatte@gmail.com
+// 2023.05 - 2023.06
+
 #pragma once
 
 namespace Xohat 
 {
-	//Es como una interfaz
+	/// <summary>
+	/// Clase encargada de hacer una acción distinta dependiendo del tipo, mas detalle en todos los archivos Algo_Task
+	/// </summary>
 	class Task
 	{
 	public:
 
 		virtual void run(float t) = 0;
 	};
-
-	//class Update_Task : public Task
-	//{
-	//public:
-	//	//constructor
-	//	void run(float t) override;
-	//};
-
-	//class Render_Task : public Task
-	//{
-	//	// list< shared_ptr< Mesh_Component > > meshes;
-
-	//	//glm::Render_Node renderer;
-
-	//public:
-
-	//	//shared_ptr< Component > create_component();
-
-	//	/*
-	//	//constructor
-	//	void run(float t) override
-	//	{
-	//		for (auto& mesh : meshes)
-	//		{
-	//			mesh->model->set_transformation(mesh->owner->get_transform()->get_matrix());
-	//		}
-
-	//		scene->get_window()->clear();
-
-	//		renderer->render();
-
-	//		scene->get_window()->swap_buffers();
-	//	}
-	//	*/
-	//};
-
-	//class Control_Task : public Task
-	//{
-	//	// list< shared_ptr< Control_Component > > control_components;
-
-	//	void run(float t) override
-	//	{
-	//		/*
-	//		for (auto& component : control_components)
-	//		{
-	//			component->controller->update(*scene, component->owner, t);
-	//		}
-	//		*/
-	//	}
-	//};
 }

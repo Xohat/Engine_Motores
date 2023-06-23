@@ -1,0 +1,84 @@
+\doxysection{Xohat\+::Kernel Class Reference}
+\hypertarget{class_xohat_1_1_kernel}{}\label{class_xohat_1_1_kernel}\index{Xohat::Kernel@{Xohat::Kernel}}
+
+
+{\ttfamily \#include $<$Kernel.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_xohat_1_1_kernel_ac3794d6ac842c86d252ac1b990ee98ab}{add\+\_\+task}} (\mbox{\hyperlink{class_xohat_1_1_task}{Task}} \texorpdfstring{$\ast$}{*}new\+\_\+task)
+\begin{DoxyCompactList}\small\item\em Para añadir nuevas tasks (Las del mismo tipo solo tienen una instancia en todo el motor) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_kernel_ab989bfeb671c39c1cab3dc210310b44d}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Para apagar el programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_kernel_ac055b6d2bf75937ced423be238c4a0f7}{run}} ()
+\begin{DoxyCompactList}\small\item\em Ciclo de todas las tasks en la escena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list$<$ \mbox{\hyperlink{class_xohat_1_1_task}{Task}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_xohat_1_1_kernel_a69ffb59708c876f2b6c77306a57fe0ac}{tasks}}
+\begin{DoxyCompactList}\small\item\em Lista de tasks. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_xohat_1_1_kernel_a2d74d6737f7c2efd66d220d1264225d7}{exit}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_xohat_1_1_kernel_ac3794d6ac842c86d252ac1b990ee98ab}\label{class_xohat_1_1_kernel_ac3794d6ac842c86d252ac1b990ee98ab} 
+\index{Xohat::Kernel@{Xohat::Kernel}!add\_task@{add\_task}}
+\index{add\_task@{add\_task}!Xohat::Kernel@{Xohat::Kernel}}
+\doxysubsubsection{\texorpdfstring{add\_task()}{add\_task()}}
+{\footnotesize\ttfamily void Xohat\+::\+Kernel\+::add\+\_\+task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_xohat_1_1_task}{Task}} \texorpdfstring{$\ast$}{*}}]{new\+\_\+task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Para añadir nuevas tasks (Las del mismo tipo solo tienen una instancia en todo el motor) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+task} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_kernel_ac055b6d2bf75937ced423be238c4a0f7}\label{class_xohat_1_1_kernel_ac055b6d2bf75937ced423be238c4a0f7} 
+\index{Xohat::Kernel@{Xohat::Kernel}!run@{run}}
+\index{run@{run}!Xohat::Kernel@{Xohat::Kernel}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Xohat\+::\+Kernel\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ciclo de todas las tasks en la escena. 
+
+\Hypertarget{class_xohat_1_1_kernel_ab989bfeb671c39c1cab3dc210310b44d}\label{class_xohat_1_1_kernel_ab989bfeb671c39c1cab3dc210310b44d} 
+\index{Xohat::Kernel@{Xohat::Kernel}!stop@{stop}}
+\index{stop@{stop}!Xohat::Kernel@{Xohat::Kernel}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Xohat\+::\+Kernel\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Para apagar el programa. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_xohat_1_1_kernel_a2d74d6737f7c2efd66d220d1264225d7}\label{class_xohat_1_1_kernel_a2d74d6737f7c2efd66d220d1264225d7} 
+\index{Xohat::Kernel@{Xohat::Kernel}!exit@{exit}}
+\index{exit@{exit}!Xohat::Kernel@{Xohat::Kernel}}
+\doxysubsubsection{\texorpdfstring{exit}{exit}}
+{\footnotesize\ttfamily bool Xohat\+::\+Kernel\+::exit\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_xohat_1_1_kernel_a69ffb59708c876f2b6c77306a57fe0ac}\label{class_xohat_1_1_kernel_a69ffb59708c876f2b6c77306a57fe0ac} 
+\index{Xohat::Kernel@{Xohat::Kernel}!tasks@{tasks}}
+\index{tasks@{tasks}!Xohat::Kernel@{Xohat::Kernel}}
+\doxysubsubsection{\texorpdfstring{tasks}{tasks}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_xohat_1_1_task}{Task}}\texorpdfstring{$\ast$}{*} $>$ Xohat\+::\+Kernel\+::tasks\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de tasks. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\mbox{\hyperlink{_kernel_8h}{Kernel.\+h}}\end{DoxyCompactItemize}

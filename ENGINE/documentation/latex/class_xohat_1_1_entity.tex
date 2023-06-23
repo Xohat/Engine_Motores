@@ -1,0 +1,207 @@
+\doxysection{Xohat\+::Entity Class Reference}
+\hypertarget{class_xohat_1_1_entity}{}\label{class_xohat_1_1_entity}\index{Xohat::Entity@{Xohat::Entity}}
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_entity_a8dd39ee7039ba22f9901ae79ca95597c}{Entity}} (\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em El constructor inicializa una entidad haciendo new a los transform y mesh, además de configurando la pertenencia de los componentes por el set\+\_\+owner, esta requiere una escena para poder funcionar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_entity_a4070edf8df22203e4904c286599a9114}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_entity_a47a3a5ef4d162e71d2d184916ced95a1}{get\+\_\+parent}} () const
+\begin{DoxyCompactList}\small\item\em Getter de padre (Si lo hay) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_transform___component}{Transform\+\_\+\+Component}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_entity_ad647ed69b455d20f2cf447e4fe44542e}{get\+\_\+transform}} () const
+\begin{DoxyCompactList}\small\item\em Getter de \doxylink{class_xohat_1_1_transform___component}{Transform\+\_\+\+Component}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_mesh___component}{Mesh\+\_\+\+Component}} $>$ \mbox{\hyperlink{class_xohat_1_1_entity_af53bac48c581aaa9c890c9cad11b6b33}{get\+\_\+mesh}} () const
+\begin{DoxyCompactList}\small\item\em Getter de \doxylink{class_xohat_1_1_mesh___component}{Mesh\+\_\+\+Component}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_entity_a29626cc1c7f246ab350a2fe74ef64e12}{set\+\_\+name}} (std\+::string new\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Setter de nombre. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_xohat_1_1_entity_a62930663d667102f3eb85a07d7117d45}{get\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Getter de nombre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_update___component}{Update\+\_\+\+Component}} $>$ \mbox{\hyperlink{class_xohat_1_1_entity_a040a8e24b48dc7b568db36701d839b9b}{update\+\_\+comp}}
+\begin{DoxyCompactList}\small\item\em Definición inicial del componente de update, pero no se inicializa a menos que se use el método de add\+\_\+update\+\_\+component de \doxylink{class_xohat_1_1_update__task}{Update\+\_\+task}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_entity_a1b5aa81b893b09af395890986bc35db5}{scene}} = 0
+\begin{DoxyCompactList}\small\item\em Referencia a la escena donde van a existir las entidades. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_entity_a9913cb35952a7e4f2765003bf3257abf}{parent}} = nullptr
+\begin{DoxyCompactList}\small\item\em Dichas entidades pueden tener un padre. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_xohat_1_1_entity_a8f408500d9894710dd6bf18b5100eab2}{name}}
+\begin{DoxyCompactList}\small\item\em Nombre de la entidad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_transform___component}{Transform\+\_\+\+Component}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_entity_adb3e00324e8f5ad7d0ad848a0d53e0ad}{transform}}
+\begin{DoxyCompactList}\small\item\em Variable \doxylink{class_xohat_1_1_transform___component}{Transform\+\_\+\+Component} ya que todos los objetos entity en este caso deberian ser capaces de moverse. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_mesh___component}{Mesh\+\_\+\+Component}} $>$ \mbox{\hyperlink{class_xohat_1_1_entity_af59c603014625fefb3131a68f1ac0818}{mesh}}
+\begin{DoxyCompactList}\small\item\em Variable \doxylink{class_xohat_1_1_mesh___component}{Mesh\+\_\+\+Component} ya que todos los objetos entity tienen una mesh al ser objetos físicos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_xohat_1_1_entity_a8dd39ee7039ba22f9901ae79ca95597c}\label{class_xohat_1_1_entity_a8dd39ee7039ba22f9901ae79ca95597c} 
+\index{Xohat::Entity@{Xohat::Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily Xohat\+::\+Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{given\+\_\+scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+El constructor inicializa una entidad haciendo new a los transform y mesh, además de configurando la pertenencia de los componentes por el set\+\_\+owner, esta requiere una escena para poder funcionar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+scene} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_entity_a4070edf8df22203e4904c286599a9114}\label{class_xohat_1_1_entity_a4070edf8df22203e4904c286599a9114} 
+\index{Xohat::Entity@{Xohat::Entity}!````~Entity@{\texorpdfstring{$\sim$}{\string~}Entity}}
+\index{````~Entity@{\texorpdfstring{$\sim$}{\string~}Entity}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Entity()}{\string~Entity()}}
+{\footnotesize\ttfamily Xohat\+::\+Entity\+::\texorpdfstring{$\sim$}{\string~}\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_xohat_1_1_entity_af53bac48c581aaa9c890c9cad11b6b33}\label{class_xohat_1_1_entity_af53bac48c581aaa9c890c9cad11b6b33} 
+\index{Xohat::Entity@{Xohat::Entity}!get\_mesh@{get\_mesh}}
+\index{get\_mesh@{get\_mesh}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{get\_mesh()}{get\_mesh()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_mesh___component}{Mesh\+\_\+\+Component}} $>$ Xohat\+::\+Entity\+::get\+\_\+mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de \doxylink{class_xohat_1_1_mesh___component}{Mesh\+\_\+\+Component}. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_entity_a62930663d667102f3eb85a07d7117d45}\label{class_xohat_1_1_entity_a62930663d667102f3eb85a07d7117d45} 
+\index{Xohat::Entity@{Xohat::Entity}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily std\+::string Xohat\+::\+Entity\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de nombre. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_entity_a47a3a5ef4d162e71d2d184916ced95a1}\label{class_xohat_1_1_entity_a47a3a5ef4d162e71d2d184916ced95a1} 
+\index{Xohat::Entity@{Xohat::Entity}!get\_parent@{get\_parent}}
+\index{get\_parent@{get\_parent}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{get\_parent()}{get\_parent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} \texorpdfstring{$\ast$}{*} Xohat\+::\+Entity\+::get\+\_\+parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de padre (Si lo hay) 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_entity_ad647ed69b455d20f2cf447e4fe44542e}\label{class_xohat_1_1_entity_ad647ed69b455d20f2cf447e4fe44542e} 
+\index{Xohat::Entity@{Xohat::Entity}!get\_transform@{get\_transform}}
+\index{get\_transform@{get\_transform}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{get\_transform()}{get\_transform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_transform___component}{Transform\+\_\+\+Component}} \texorpdfstring{$\ast$}{*} Xohat\+::\+Entity\+::get\+\_\+transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de \doxylink{class_xohat_1_1_transform___component}{Transform\+\_\+\+Component}. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_entity_a29626cc1c7f246ab350a2fe74ef64e12}\label{class_xohat_1_1_entity_a29626cc1c7f246ab350a2fe74ef64e12} 
+\index{Xohat::Entity@{Xohat::Entity}!set\_name@{set\_name}}
+\index{set\_name@{set\_name}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
+{\footnotesize\ttfamily void Xohat\+::\+Entity\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter de nombre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_xohat_1_1_entity_af59c603014625fefb3131a68f1ac0818}\label{class_xohat_1_1_entity_af59c603014625fefb3131a68f1ac0818} 
+\index{Xohat::Entity@{Xohat::Entity}!mesh@{mesh}}
+\index{mesh@{mesh}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{mesh}{mesh}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_mesh___component}{Mesh\+\_\+\+Component}} $>$ Xohat\+::\+Entity\+::mesh\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Variable \doxylink{class_xohat_1_1_mesh___component}{Mesh\+\_\+\+Component} ya que todos los objetos entity tienen una mesh al ser objetos físicos. 
+
+\Hypertarget{class_xohat_1_1_entity_a8f408500d9894710dd6bf18b5100eab2}\label{class_xohat_1_1_entity_a8f408500d9894710dd6bf18b5100eab2} 
+\index{Xohat::Entity@{Xohat::Entity}!name@{name}}
+\index{name@{name}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Xohat\+::\+Entity\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Nombre de la entidad. 
+
+\Hypertarget{class_xohat_1_1_entity_a9913cb35952a7e4f2765003bf3257abf}\label{class_xohat_1_1_entity_a9913cb35952a7e4f2765003bf3257abf} 
+\index{Xohat::Entity@{Xohat::Entity}!parent@{parent}}
+\index{parent@{parent}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_entity}{Entity}}\texorpdfstring{$\ast$}{*} Xohat\+::\+Entity\+::parent = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dichas entidades pueden tener un padre. 
+
+\Hypertarget{class_xohat_1_1_entity_a1b5aa81b893b09af395890986bc35db5}\label{class_xohat_1_1_entity_a1b5aa81b893b09af395890986bc35db5} 
+\index{Xohat::Entity@{Xohat::Entity}!scene@{scene}}
+\index{scene@{scene}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_scene}{Scene}}\texorpdfstring{$\ast$}{*} Xohat\+::\+Entity\+::scene = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referencia a la escena donde van a existir las entidades. 
+
+\Hypertarget{class_xohat_1_1_entity_adb3e00324e8f5ad7d0ad848a0d53e0ad}\label{class_xohat_1_1_entity_adb3e00324e8f5ad7d0ad848a0d53e0ad} 
+\index{Xohat::Entity@{Xohat::Entity}!transform@{transform}}
+\index{transform@{transform}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_transform___component}{Transform\+\_\+\+Component}}\texorpdfstring{$\ast$}{*} Xohat\+::\+Entity\+::transform\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Variable \doxylink{class_xohat_1_1_transform___component}{Transform\+\_\+\+Component} ya que todos los objetos entity en este caso deberian ser capaces de moverse. 
+
+\Hypertarget{class_xohat_1_1_entity_a040a8e24b48dc7b568db36701d839b9b}\label{class_xohat_1_1_entity_a040a8e24b48dc7b568db36701d839b9b} 
+\index{Xohat::Entity@{Xohat::Entity}!update\_comp@{update\_comp}}
+\index{update\_comp@{update\_comp}!Xohat::Entity@{Xohat::Entity}}
+\doxysubsubsection{\texorpdfstring{update\_comp}{update\_comp}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_update___component}{Update\+\_\+\+Component}} $>$ Xohat\+::\+Entity\+::update\+\_\+comp}
+
+
+
+Definición inicial del componente de update, pero no se inicializa a menos que se use el método de add\+\_\+update\+\_\+component de \doxylink{class_xohat_1_1_update__task}{Update\+\_\+task}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\mbox{\hyperlink{_entity_8h}{Entity.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,252 @@
+\doxysection{Xohat\+::Window Class Reference}
+\hypertarget{class_xohat_1_1_window}{}\label{class_xohat_1_1_window}\index{Xohat::Window@{Xohat::Window}}
+
+
+{\ttfamily \#include $<$Window.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_xohat_1_1_window_1_1_event}{Event}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_window_a174ee9a2c0805ec36a3ae0a45f86aa44}{Window}} (const std\+::string title, unsigned \mbox{\hyperlink{class_xohat_1_1_window_a5bf6c7f7103ad9a42670e4821c27d267}{width}}, unsigned \mbox{\hyperlink{class_xohat_1_1_window_a203a39f7edb777331e8007f2c07cdf3e}{height}}, bool full\+Screen)
+\begin{DoxyCompactList}\small\item\em Constructor de Ventana. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_window_a405c817e01423415ea9f930af61052b2}{\texorpdfstring{$\sim$}{\string~}\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de ventana. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_window_a2731d7592db4c767e159fcd5dc82618b}{update\+\_\+window\+\_\+dimensions}} ()
+\item 
+void \mbox{\hyperlink{class_xohat_1_1_window_aebef17f782b838adef56f3cba21abf96}{show}} ()
+\begin{DoxyCompactList}\small\item\em Muestra la ventana. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_window_a08d93a95f67d32d281bbbe4e679db0e5}{hide}} ()
+\begin{DoxyCompactList}\small\item\em Esconde la ventana. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_window_ad492c76ea6ce6deaae83e97f9e240cc9}{set\+\_\+\+Full\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Pone la escena en pantalla completa (Cuidado, fuerza la resolución puesta en la window a la pantalla) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_window_ad6a889aba5ff31c82942c0490c8d0669}{set\+\_\+\+Windowed}} ()
+\begin{DoxyCompactList}\small\item\em Pone la escena en modo ventana (Con las propiedades de la ventana correspondientes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_window_a2f17f5b9b3d91e29268907f82d73fd78}{swap\+\_\+buffers}} ()
+\begin{DoxyCompactList}\small\item\em Cambia los buffers para pintar. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_xohat_1_1_window_a792e2836750383fff4736fd3efa886d5}{get\+\_\+width}} ()
+\begin{DoxyCompactList}\small\item\em Getter de width de la ventana. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_xohat_1_1_window_a986cf696225608bf766ad20ee6c10d20}{get\+\_\+height}} ()
+\begin{DoxyCompactList}\small\item\em Getter de height de la ventana. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_window_adeab014ee094f5e161f8509120cea0bb}{enable\+\_\+vsync}} ()
+\begin{DoxyCompactList}\small\item\em Pone la sincronización vertical. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_window_a0536441c94348c7623f5f139159ba401}{disable\+\_\+vsync}} ()
+\begin{DoxyCompactList}\small\item\em Quita la sincronización vertical. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_window_abb6efa58e88dfbd1db2b57c8dccd1c3a}{clear}} () const
+\begin{DoxyCompactList}\small\item\em Limpia la pantalla de lo pintado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_xohat_1_1_window_a052c283a639ddc856b7e6106cfcc0862}{poll}} (\mbox{\hyperlink{struct_xohat_1_1_window_1_1_event}{Event}} \&event)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_xohat_1_1_window_1_1_event}{Event} de reconocimiento de objetos de la ventana. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_window_a98064da2cf6cd49021ad334bb63ca2ab}{window}}
+\item 
+SDL\+\_\+\+GLContext \mbox{\hyperlink{class_xohat_1_1_window_aaae4329c765d9594fd1eded58d484cf6}{gl\+\_\+context}}
+\item 
+int \mbox{\hyperlink{class_xohat_1_1_window_a5bf6c7f7103ad9a42670e4821c27d267}{width}}
+\item 
+int \mbox{\hyperlink{class_xohat_1_1_window_a203a39f7edb777331e8007f2c07cdf3e}{height}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_xohat_1_1_window_a174ee9a2c0805ec36a3ae0a45f86aa44}\label{class_xohat_1_1_window_a174ee9a2c0805ec36a3ae0a45f86aa44} 
+\index{Xohat::Window@{Xohat::Window}!Window@{Window}}
+\index{Window@{Window}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}}
+{\footnotesize\ttfamily Xohat\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const std\+::string}]{title,  }\item[{unsigned}]{width,  }\item[{unsigned}]{height,  }\item[{bool}]{full\+Screen }\end{DoxyParamCaption})}
+
+
+
+Constructor de Ventana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & \\
+\hline
+{\em width} & \\
+\hline
+{\em height} & \\
+\hline
+{\em full\+Screen} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_window_a405c817e01423415ea9f930af61052b2}\label{class_xohat_1_1_window_a405c817e01423415ea9f930af61052b2} 
+\index{Xohat::Window@{Xohat::Window}!````~Window@{\texorpdfstring{$\sim$}{\string~}Window}}
+\index{````~Window@{\texorpdfstring{$\sim$}{\string~}Window}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Window()}{\string~Window()}}
+{\footnotesize\ttfamily Xohat\+::\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor de ventana. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_xohat_1_1_window_abb6efa58e88dfbd1db2b57c8dccd1c3a}\label{class_xohat_1_1_window_abb6efa58e88dfbd1db2b57c8dccd1c3a} 
+\index{Xohat::Window@{Xohat::Window}!clear@{clear}}
+\index{clear@{clear}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Xohat\+::\+Window\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Limpia la pantalla de lo pintado. 
+
+\Hypertarget{class_xohat_1_1_window_a0536441c94348c7623f5f139159ba401}\label{class_xohat_1_1_window_a0536441c94348c7623f5f139159ba401} 
+\index{Xohat::Window@{Xohat::Window}!disable\_vsync@{disable\_vsync}}
+\index{disable\_vsync@{disable\_vsync}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{disable\_vsync()}{disable\_vsync()}}
+{\footnotesize\ttfamily void Xohat\+::\+Window\+::disable\+\_\+vsync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Quita la sincronización vertical. 
+
+\Hypertarget{class_xohat_1_1_window_adeab014ee094f5e161f8509120cea0bb}\label{class_xohat_1_1_window_adeab014ee094f5e161f8509120cea0bb} 
+\index{Xohat::Window@{Xohat::Window}!enable\_vsync@{enable\_vsync}}
+\index{enable\_vsync@{enable\_vsync}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{enable\_vsync()}{enable\_vsync()}}
+{\footnotesize\ttfamily void Xohat\+::\+Window\+::enable\+\_\+vsync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pone la sincronización vertical. 
+
+\Hypertarget{class_xohat_1_1_window_a986cf696225608bf766ad20ee6c10d20}\label{class_xohat_1_1_window_a986cf696225608bf766ad20ee6c10d20} 
+\index{Xohat::Window@{Xohat::Window}!get\_height@{get\_height}}
+\index{get\_height@{get\_height}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{get\_height()}{get\_height()}}
+{\footnotesize\ttfamily unsigned int Xohat\+::\+Window\+::get\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de height de la ventana. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_window_a792e2836750383fff4736fd3efa886d5}\label{class_xohat_1_1_window_a792e2836750383fff4736fd3efa886d5} 
+\index{Xohat::Window@{Xohat::Window}!get\_width@{get\_width}}
+\index{get\_width@{get\_width}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{get\_width()}{get\_width()}}
+{\footnotesize\ttfamily unsigned int Xohat\+::\+Window\+::get\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de width de la ventana. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_window_a08d93a95f67d32d281bbbe4e679db0e5}\label{class_xohat_1_1_window_a08d93a95f67d32d281bbbe4e679db0e5} 
+\index{Xohat::Window@{Xohat::Window}!hide@{hide}}
+\index{hide@{hide}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{hide()}{hide()}}
+{\footnotesize\ttfamily void Xohat\+::\+Window\+::hide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Esconde la ventana. 
+
+\Hypertarget{class_xohat_1_1_window_a052c283a639ddc856b7e6106cfcc0862}\label{class_xohat_1_1_window_a052c283a639ddc856b7e6106cfcc0862} 
+\index{Xohat::Window@{Xohat::Window}!poll@{poll}}
+\index{poll@{poll}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily bool Xohat\+::\+Window\+::poll (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_xohat_1_1_window_1_1_event}{Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_xohat_1_1_window_1_1_event}{Event} de reconocimiento de objetos de la ventana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_window_ad492c76ea6ce6deaae83e97f9e240cc9}\label{class_xohat_1_1_window_ad492c76ea6ce6deaae83e97f9e240cc9} 
+\index{Xohat::Window@{Xohat::Window}!set\_FullScreen@{set\_FullScreen}}
+\index{set\_FullScreen@{set\_FullScreen}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{set\_FullScreen()}{set\_FullScreen()}}
+{\footnotesize\ttfamily void Xohat\+::\+Window\+::set\+\_\+\+Full\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pone la escena en pantalla completa (Cuidado, fuerza la resolución puesta en la window a la pantalla) 
+
+\Hypertarget{class_xohat_1_1_window_ad6a889aba5ff31c82942c0490c8d0669}\label{class_xohat_1_1_window_ad6a889aba5ff31c82942c0490c8d0669} 
+\index{Xohat::Window@{Xohat::Window}!set\_Windowed@{set\_Windowed}}
+\index{set\_Windowed@{set\_Windowed}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{set\_Windowed()}{set\_Windowed()}}
+{\footnotesize\ttfamily void Xohat\+::\+Window\+::set\+\_\+\+Windowed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pone la escena en modo ventana (Con las propiedades de la ventana correspondientes. 
+
+\Hypertarget{class_xohat_1_1_window_aebef17f782b838adef56f3cba21abf96}\label{class_xohat_1_1_window_aebef17f782b838adef56f3cba21abf96} 
+\index{Xohat::Window@{Xohat::Window}!show@{show}}
+\index{show@{show}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Xohat\+::\+Window\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Muestra la ventana. 
+
+\Hypertarget{class_xohat_1_1_window_a2f17f5b9b3d91e29268907f82d73fd78}\label{class_xohat_1_1_window_a2f17f5b9b3d91e29268907f82d73fd78} 
+\index{Xohat::Window@{Xohat::Window}!swap\_buffers@{swap\_buffers}}
+\index{swap\_buffers@{swap\_buffers}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{swap\_buffers()}{swap\_buffers()}}
+{\footnotesize\ttfamily void Xohat\+::\+Window\+::swap\+\_\+buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cambia los buffers para pintar. 
+
+\Hypertarget{class_xohat_1_1_window_a2731d7592db4c767e159fcd5dc82618b}\label{class_xohat_1_1_window_a2731d7592db4c767e159fcd5dc82618b} 
+\index{Xohat::Window@{Xohat::Window}!update\_window\_dimensions@{update\_window\_dimensions}}
+\index{update\_window\_dimensions@{update\_window\_dimensions}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{update\_window\_dimensions()}{update\_window\_dimensions()}}
+{\footnotesize\ttfamily void Xohat\+::\+Window\+::update\+\_\+window\+\_\+dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_xohat_1_1_window_aaae4329c765d9594fd1eded58d484cf6}\label{class_xohat_1_1_window_aaae4329c765d9594fd1eded58d484cf6} 
+\index{Xohat::Window@{Xohat::Window}!gl\_context@{gl\_context}}
+\index{gl\_context@{gl\_context}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{gl\_context}{gl\_context}}
+{\footnotesize\ttfamily SDL\+\_\+\+GLContext Xohat\+::\+Window\+::gl\+\_\+context\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_xohat_1_1_window_a203a39f7edb777331e8007f2c07cdf3e}\label{class_xohat_1_1_window_a203a39f7edb777331e8007f2c07cdf3e} 
+\index{Xohat::Window@{Xohat::Window}!height@{height}}
+\index{height@{height}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int Xohat\+::\+Window\+::height\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_xohat_1_1_window_a5bf6c7f7103ad9a42670e4821c27d267}\label{class_xohat_1_1_window_a5bf6c7f7103ad9a42670e4821c27d267} 
+\index{Xohat::Window@{Xohat::Window}!width@{width}}
+\index{width@{width}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Xohat\+::\+Window\+::width\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_xohat_1_1_window_a98064da2cf6cd49021ad334bb63ca2ab}\label{class_xohat_1_1_window_a98064da2cf6cd49021ad334bb63ca2ab} 
+\index{Xohat::Window@{Xohat::Window}!window@{window}}
+\index{window@{window}!Xohat::Window@{Xohat::Window}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily SDL\+\_\+\+Window\texorpdfstring{$\ast$}{*} Xohat\+::\+Window\+::window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\mbox{\hyperlink{_window_8h}{Window.\+h}}\end{DoxyCompactItemize}

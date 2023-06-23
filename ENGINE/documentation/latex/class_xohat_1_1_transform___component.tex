@@ -1,0 +1,163 @@
+\doxysection{Xohat\+::Transform\+\_\+\+Component Class Reference}
+\hypertarget{class_xohat_1_1_transform___component}{}\label{class_xohat_1_1_transform___component}\index{Xohat::Transform\_Component@{Xohat::Transform\_Component}}
+
+
+{\ttfamily \#include $<$Transform\+\_\+\+Component.\+h$>$}
+
+Inheritance diagram for Xohat\+::Transform\+\_\+\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_xohat_1_1_transform___component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_transform___component_a61f3e0f262c1f243cc539578c187918c}{Transform\+\_\+\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Constructor que inicializa todas las variables a unos valores estandar. \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{class_xohat_1_1_transform___component_a4afd8d784e810d0c04b3bc6eac7e4c8a}{get\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Getter de la posición. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_transform___component_a6666b29be6405b55eb403ad869a265a2}{set\+\_\+position}} (glm\+::vec3 new\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Setter de la posición. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_transform___component_aac50b83c917fb5dedae319570dbfcdc5}{set\+\_\+scale}} (glm\+::vec3 new\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Setter de la escala. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_xohat_1_1_transform___component_a3e9ada6646507f2607e77289969e1317}{get\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Getter de la matriz de transformación. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_xohat_1_1_component}{Xohat\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_component_ab0358b8640f99a7208571912a41e84b6}{get\+\_\+owner}} ()
+\begin{DoxyCompactList}\small\item\em Getter de owner. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_component_a8b97b3fe6d37a4fca1267d25b106ac11}{set\+\_\+owner}} (\mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} \texorpdfstring{$\ast$}{*}new\+\_\+owner)
+\begin{DoxyCompactList}\small\item\em Setter de owner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_xohat_1_1_transform___component_af0b267ca707c50411688eb1265fa88e1}{name}} ()
+\begin{DoxyCompactList}\small\item\em Nombre del componente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_xohat_1_1_transform___component_a61af345a4a0ee9caaeb07043955cae86}{position}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_xohat_1_1_transform___component_af8f64223cf3341010315e720ebdd828e}{scale}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_xohat_1_1_transform___component_a7112b891d5a8840419ed1b9ef929eeca}{euler\+\_\+angles}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_xohat_1_1_component}{Xohat\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_component_ab49e6f28b5ed6394a6ec4ed46da4591f}{owner}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_xohat_1_1_transform___component_a61f3e0f262c1f243cc539578c187918c}\label{class_xohat_1_1_transform___component_a61f3e0f262c1f243cc539578c187918c} 
+\index{Xohat::Transform\_Component@{Xohat::Transform\_Component}!Transform\_Component@{Transform\_Component}}
+\index{Transform\_Component@{Transform\_Component}!Xohat::Transform\_Component@{Xohat::Transform\_Component}}
+\doxysubsubsection{\texorpdfstring{Transform\_Component()}{Transform\_Component()}}
+{\footnotesize\ttfamily Xohat\+::\+Transform\+\_\+\+Component\+::\+Transform\+\_\+\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor que inicializa todas las variables a unos valores estandar. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_xohat_1_1_transform___component_a3e9ada6646507f2607e77289969e1317}\label{class_xohat_1_1_transform___component_a3e9ada6646507f2607e77289969e1317} 
+\index{Xohat::Transform\_Component@{Xohat::Transform\_Component}!get\_matrix@{get\_matrix}}
+\index{get\_matrix@{get\_matrix}!Xohat::Transform\_Component@{Xohat::Transform\_Component}}
+\doxysubsubsection{\texorpdfstring{get\_matrix()}{get\_matrix()}}
+{\footnotesize\ttfamily glm\+::mat4 Xohat\+::\+Transform\+\_\+\+Component\+::get\+\_\+matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter de la matriz de transformación. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_transform___component_a4afd8d784e810d0c04b3bc6eac7e4c8a}\label{class_xohat_1_1_transform___component_a4afd8d784e810d0c04b3bc6eac7e4c8a} 
+\index{Xohat::Transform\_Component@{Xohat::Transform\_Component}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!Xohat::Transform\_Component@{Xohat::Transform\_Component}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily glm\+::vec3 Xohat\+::\+Transform\+\_\+\+Component\+::get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de la posición. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_transform___component_af0b267ca707c50411688eb1265fa88e1}\label{class_xohat_1_1_transform___component_af0b267ca707c50411688eb1265fa88e1} 
+\index{Xohat::Transform\_Component@{Xohat::Transform\_Component}!name@{name}}
+\index{name@{name}!Xohat::Transform\_Component@{Xohat::Transform\_Component}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily static std\+::string Xohat\+::\+Transform\+\_\+\+Component\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Nombre del componente. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_xohat_1_1_transform___component_a6666b29be6405b55eb403ad869a265a2}\label{class_xohat_1_1_transform___component_a6666b29be6405b55eb403ad869a265a2} 
+\index{Xohat::Transform\_Component@{Xohat::Transform\_Component}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!Xohat::Transform\_Component@{Xohat::Transform\_Component}}
+\doxysubsubsection{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily void Xohat\+::\+Transform\+\_\+\+Component\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{new\+\_\+position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter de la posición. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+position} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_transform___component_aac50b83c917fb5dedae319570dbfcdc5}\label{class_xohat_1_1_transform___component_aac50b83c917fb5dedae319570dbfcdc5} 
+\index{Xohat::Transform\_Component@{Xohat::Transform\_Component}!set\_scale@{set\_scale}}
+\index{set\_scale@{set\_scale}!Xohat::Transform\_Component@{Xohat::Transform\_Component}}
+\doxysubsubsection{\texorpdfstring{set\_scale()}{set\_scale()}}
+{\footnotesize\ttfamily void Xohat\+::\+Transform\+\_\+\+Component\+::set\+\_\+scale (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{new\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter de la escala. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+scale} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_xohat_1_1_transform___component_a7112b891d5a8840419ed1b9ef929eeca}\label{class_xohat_1_1_transform___component_a7112b891d5a8840419ed1b9ef929eeca} 
+\index{Xohat::Transform\_Component@{Xohat::Transform\_Component}!euler\_angles@{euler\_angles}}
+\index{euler\_angles@{euler\_angles}!Xohat::Transform\_Component@{Xohat::Transform\_Component}}
+\doxysubsubsection{\texorpdfstring{euler\_angles}{euler\_angles}}
+{\footnotesize\ttfamily glm\+::vec3 Xohat\+::\+Transform\+\_\+\+Component\+::euler\+\_\+angles\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_xohat_1_1_transform___component_a61af345a4a0ee9caaeb07043955cae86}\label{class_xohat_1_1_transform___component_a61af345a4a0ee9caaeb07043955cae86} 
+\index{Xohat::Transform\_Component@{Xohat::Transform\_Component}!position@{position}}
+\index{position@{position}!Xohat::Transform\_Component@{Xohat::Transform\_Component}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily glm\+::vec3 Xohat\+::\+Transform\+\_\+\+Component\+::position\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_xohat_1_1_transform___component_af8f64223cf3341010315e720ebdd828e}\label{class_xohat_1_1_transform___component_af8f64223cf3341010315e720ebdd828e} 
+\index{Xohat::Transform\_Component@{Xohat::Transform\_Component}!scale@{scale}}
+\index{scale@{scale}!Xohat::Transform\_Component@{Xohat::Transform\_Component}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily glm\+::vec3 Xohat\+::\+Transform\+\_\+\+Component\+::scale\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\mbox{\hyperlink{_transform___component_8h}{Transform\+\_\+\+Component.\+h}}\end{DoxyCompactItemize}

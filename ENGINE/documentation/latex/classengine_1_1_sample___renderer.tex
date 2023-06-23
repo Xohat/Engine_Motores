@@ -1,0 +1,66 @@
+\doxysection{engine\+::Sample\+\_\+\+Renderer Class Reference}
+\hypertarget{classengine_1_1_sample___renderer}{}\label{classengine_1_1_sample___renderer}\index{engine::Sample\_Renderer@{engine::Sample\_Renderer}}
+
+
+{\ttfamily \#include $<$Sample\+\_\+\+Renderer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classengine_1_1_sample___renderer_ac758d6597bf03fabf3f737d54251f88f}{Sample\+\_\+\+Renderer}} (\mbox{\hyperlink{class_xohat_1_1_window}{Xohat\+::\+Window}} \&given\+\_\+window)
+\item 
+\mbox{\hyperlink{classengine_1_1_sample___renderer_ae34042e1a9a68682f8705b8ac3975cd3}{\texorpdfstring{$\sim$}{\string~}\+Sample\+\_\+\+Renderer}} ()
+\item 
+void \mbox{\hyperlink{classengine_1_1_sample___renderer_ae667463d7927cd59f09c5e27c7323d61}{render}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ glt\+::\+Render\+\_\+\+Node $>$ \mbox{\hyperlink{classengine_1_1_sample___renderer_a2c73d03c5219fc9beb7a43f91f0cba41}{renderer}}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_window}{Xohat\+::\+Window}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classengine_1_1_sample___renderer_aa9c1f0b37e4173d037e9a53b612b4d71}{window}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classengine_1_1_sample___renderer_ac758d6597bf03fabf3f737d54251f88f}\label{classengine_1_1_sample___renderer_ac758d6597bf03fabf3f737d54251f88f} 
+\index{engine::Sample\_Renderer@{engine::Sample\_Renderer}!Sample\_Renderer@{Sample\_Renderer}}
+\index{Sample\_Renderer@{Sample\_Renderer}!engine::Sample\_Renderer@{engine::Sample\_Renderer}}
+\doxysubsubsection{\texorpdfstring{Sample\_Renderer()}{Sample\_Renderer()}}
+{\footnotesize\ttfamily engine\+::\+Sample\+\_\+\+Renderer\+::\+Sample\+\_\+\+Renderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_xohat_1_1_window}{Xohat\+::\+Window}} \&}]{given\+\_\+window }\end{DoxyParamCaption})}
+
+\Hypertarget{classengine_1_1_sample___renderer_ae34042e1a9a68682f8705b8ac3975cd3}\label{classengine_1_1_sample___renderer_ae34042e1a9a68682f8705b8ac3975cd3} 
+\index{engine::Sample\_Renderer@{engine::Sample\_Renderer}!````~Sample\_Renderer@{\texorpdfstring{$\sim$}{\string~}Sample\_Renderer}}
+\index{````~Sample\_Renderer@{\texorpdfstring{$\sim$}{\string~}Sample\_Renderer}!engine::Sample\_Renderer@{engine::Sample\_Renderer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Sample\_Renderer()}{\string~Sample\_Renderer()}}
+{\footnotesize\ttfamily engine\+::\+Sample\+\_\+\+Renderer\+::\texorpdfstring{$\sim$}{\string~}\+Sample\+\_\+\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+En este caso es necesario definir explícitamente el destructor en el archivo de implementación (CPP) para que el compilador pueda destruir el Render\+\_\+\+Node. Si se deja que el compilador cree un destructor por defecto en el programa que use el engine, como solo tendrá una declaración adelantada, no sabrá cómo destruirlo y ello dará lugar a un error de compilación. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classengine_1_1_sample___renderer_ae667463d7927cd59f09c5e27c7323d61}\label{classengine_1_1_sample___renderer_ae667463d7927cd59f09c5e27c7323d61} 
+\index{engine::Sample\_Renderer@{engine::Sample\_Renderer}!render@{render}}
+\index{render@{render}!engine::Sample\_Renderer@{engine::Sample\_Renderer}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void engine\+::\+Sample\+\_\+\+Renderer\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classengine_1_1_sample___renderer_a2c73d03c5219fc9beb7a43f91f0cba41}\label{classengine_1_1_sample___renderer_a2c73d03c5219fc9beb7a43f91f0cba41} 
+\index{engine::Sample\_Renderer@{engine::Sample\_Renderer}!renderer@{renderer}}
+\index{renderer@{renderer}!engine::Sample\_Renderer@{engine::Sample\_Renderer}}
+\doxysubsubsection{\texorpdfstring{renderer}{renderer}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ glt\+::\+Render\+\_\+\+Node $>$ engine\+::\+Sample\+\_\+\+Renderer\+::renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classengine_1_1_sample___renderer_aa9c1f0b37e4173d037e9a53b612b4d71}\label{classengine_1_1_sample___renderer_aa9c1f0b37e4173d037e9a53b612b4d71} 
+\index{engine::Sample\_Renderer@{engine::Sample\_Renderer}!window@{window}}
+\index{window@{window}!engine::Sample\_Renderer@{engine::Sample\_Renderer}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_window}{Xohat\+::\+Window}}\texorpdfstring{$\ast$}{*} engine\+::\+Sample\+\_\+\+Renderer\+::window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\mbox{\hyperlink{_sample___renderer_8hpp}{Sample\+\_\+\+Renderer.\+hpp}}\end{DoxyCompactItemize}

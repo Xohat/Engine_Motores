@@ -1,3 +1,13 @@
+/**
+* @file Timer.h
+* @brief Código relacionado con el cronometraje de acciones
+* @author Arturo Vilar Carretero
+*/
+
+// Copyright (c) 2023 Arturo / Xohat
+// arturovilarc@gmail.com / xohatlatte@gmail.com
+// 2023.05 - 2023.06
+
 #pragma once
 
 #include <chrono>

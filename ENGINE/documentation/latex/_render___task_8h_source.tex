@@ -1,0 +1,56 @@
+\doxysection{Render\+\_\+\+Task.\+h}
+\hypertarget{_render___task_8h_source}{}\label{_render___task_8h_source}\index{F:/Github/Engine\_Motores/ENGINE/code/headers/Render\_Task.h@{F:/Github/Engine\_Motores/ENGINE/code/headers/Render\_Task.h}}
+\mbox{\hyperlink{_render___task_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Copyright\ (c)\ 2023\ Arturo\ /\ Xohat}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ arturovilarc@gmail.com\ /\ xohatlatte@gmail.com}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ 2023.05\ -\/\ 2023.06}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_task_8h}{Task.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}Renderer.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mesh___component_8h}{Mesh\_Component.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceglt}{glt}}\ }
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{class\ }Render\_Node;}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_xohat}{Xohat}}\ }
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//Declraciones\ adelantadas\ par\ evitar\ el\ include}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{class\ }Scene;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{class\ }Entity;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_xohat_1_1_render___task}{Render\_Task}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_xohat_1_1_task}{Task}}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ list<\ shared\_ptr<\ Mesh\_Component\ >\ >\ \mbox{\hyperlink{class_xohat_1_1_render___task_a6afa5bb47d3a13a75ee5fc6103db9479}{meshes}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::shared\_ptr<glt::Render\_Node>\ \mbox{\hyperlink{class_xohat_1_1_render___task_a26762bfdde949dd75233faff0c78bec6}{renderer}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene}{Scene}}*\ \mbox{\hyperlink{class_xohat_1_1_render___task_a23cb62f941ceb3952b372711eebfdaa4}{scene}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_render___task_a6ed4a20f408ffe7b59883c7bc338943d}{initialize\_render\_task}}(\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}}*\ \mbox{\hyperlink{class_xohat_1_1_render___task_a23cb62f941ceb3952b372711eebfdaa4}{scene}});}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_render___task_abdaed8ceb378c27f8d3f3e320f9a4df0}{set\_scene}}(\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}}*\ new\_scene)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_render___task_a23cb62f941ceb3952b372711eebfdaa4}{scene}}\ =\ new\_scene;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_render___task_aed870ed10b2b5270014d66e1c71a8c45}{add\_mesh\_component\_to\_meshes}}(\mbox{\hyperlink{class_xohat_1_1_entity}{Entity}}*\ entity);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_render___task_aecceae825d4ea4c59eb3710d89e9eed3}{run}}(\textcolor{keywordtype}{float}\ t)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00082\ \ \ \ \ \};}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+
+\end{DoxyCode}

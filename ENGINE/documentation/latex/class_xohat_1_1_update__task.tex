@@ -1,0 +1,86 @@
+\doxysection{Xohat\+::Update\+\_\+task Class Reference}
+\hypertarget{class_xohat_1_1_update__task}{}\label{class_xohat_1_1_update__task}\index{Xohat::Update\_task@{Xohat::Update\_task}}
+
+
+{\ttfamily \#include $<$Update\+\_\+task.\+h$>$}
+
+Inheritance diagram for Xohat\+::Update\+\_\+task\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_xohat_1_1_update__task}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_xohat_1_1_update__task_ab0c517f5c49b81005a030edf15b92d66}{add\+\_\+update\+\_\+component}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_update___component}{Update\+\_\+\+Component}} $>$ update)
+\begin{DoxyCompactList}\small\item\em Se añade un \doxylink{class_xohat_1_1_update___component}{Update\+\_\+\+Component} a la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_xohat_1_1_task_a61414073e04d39a5f5b1483d03bad372}{run}} (float t)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_xohat_1_1_update__task_a448d41f38394319fc89e575104e59d76}{run}} (float t)
+\begin{DoxyCompactList}\small\item\em Acciona el método update de todo lo que tenga en la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_update___component}{Update\+\_\+\+Component}} $>$ $>$ \mbox{\hyperlink{class_xohat_1_1_update__task_a3d74b6740d7404b5cb6c58e8da1851bb}{updates}}
+\begin{DoxyCompactList}\small\item\em Lista de métodos update a accionar en el run. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_xohat_1_1_update__task_ab0c517f5c49b81005a030edf15b92d66}\label{class_xohat_1_1_update__task_ab0c517f5c49b81005a030edf15b92d66} 
+\index{Xohat::Update\_task@{Xohat::Update\_task}!add\_update\_component@{add\_update\_component}}
+\index{add\_update\_component@{add\_update\_component}!Xohat::Update\_task@{Xohat::Update\_task}}
+\doxysubsubsection{\texorpdfstring{add\_update\_component()}{add\_update\_component()}}
+{\footnotesize\ttfamily void Xohat\+::\+Update\+\_\+task\+::add\+\_\+update\+\_\+component (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_update___component}{Update\+\_\+\+Component}} $>$}]{update }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Se añade un \doxylink{class_xohat_1_1_update___component}{Update\+\_\+\+Component} a la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_update__task_a448d41f38394319fc89e575104e59d76}\label{class_xohat_1_1_update__task_a448d41f38394319fc89e575104e59d76} 
+\index{Xohat::Update\_task@{Xohat::Update\_task}!run@{run}}
+\index{run@{run}!Xohat::Update\_task@{Xohat::Update\_task}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Xohat\+::\+Update\+\_\+task\+::run (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Acciona el método update de todo lo que tenga en la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_xohat_1_1_task_a61414073e04d39a5f5b1483d03bad372}{Xohat\+::\+Task}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_xohat_1_1_update__task_a3d74b6740d7404b5cb6c58e8da1851bb}\label{class_xohat_1_1_update__task_a3d74b6740d7404b5cb6c58e8da1851bb} 
+\index{Xohat::Update\_task@{Xohat::Update\_task}!updates@{updates}}
+\index{updates@{updates}!Xohat::Update\_task@{Xohat::Update\_task}}
+\doxysubsubsection{\texorpdfstring{updates}{updates}}
+{\footnotesize\ttfamily list$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_update___component}{Update\+\_\+\+Component}} $>$ $>$ Xohat\+::\+Update\+\_\+task\+::updates\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de métodos update a accionar en el run. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\mbox{\hyperlink{_update__task_8h}{Update\+\_\+task.\+h}}\end{DoxyCompactItemize}

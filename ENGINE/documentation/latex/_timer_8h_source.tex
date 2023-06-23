@@ -1,0 +1,41 @@
+\doxysection{Timer.\+h}
+\hypertarget{_timer_8h_source}{}\label{_timer_8h_source}\index{F:/Github/Engine\_Motores/ENGINE/code/headers/Timer.h@{F:/Github/Engine\_Motores/ENGINE/code/headers/Timer.h}}
+\mbox{\hyperlink{_timer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Copyright\ (c)\ 2023\ Arturo\ /\ Xohat}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ arturovilarc@gmail.com\ /\ xohatlatte@gmail.com}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ 2023.05\ -\/\ 2023.06}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_xohat}{Xohat}}\ }
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_xohat_1_1_timer}{Timer}}}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::chrono::high\_resolution\_clock::time\_point\ \mbox{\hyperlink{class_xohat_1_1_timer_a65d9846969e2bd9b1859be44449b073a}{start\_time}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_timer_a1f974ed30ad471c99ff5400079629821}{Timer}}()}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_timer_ae809389ee5968fe091d5fd3026ce68b0}{reset}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_timer_ae809389ee5968fe091d5fd3026ce68b0}{reset}}()}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_timer_a65d9846969e2bd9b1859be44449b073a}{start\_time}}\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_xohat_1_1_timer_a06f0905db8c7420e84b7af2915988061}{get\_elapsed\_seconds}}()}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ std::chrono::high\_resolution\_clock::time\_point\ current\_time\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ std::chrono::duration<float>\ elapsed\_seconds\ =\ current\_time\ -\/\ \mbox{\hyperlink{class_xohat_1_1_timer_a65d9846969e2bd9b1859be44449b073a}{start\_time}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ elapsed\_seconds.count();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}

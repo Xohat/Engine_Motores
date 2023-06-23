@@ -1,0 +1,141 @@
+\doxysection{Xohat\+::Render\+\_\+\+Task Class Reference}
+\hypertarget{class_xohat_1_1_render___task}{}\label{class_xohat_1_1_render___task}\index{Xohat::Render\_Task@{Xohat::Render\_Task}}
+
+
+{\ttfamily \#include $<$Render\+\_\+\+Task.\+h$>$}
+
+Inheritance diagram for Xohat\+::Render\+\_\+\+Task\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_xohat_1_1_render___task}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_xohat_1_1_render___task_a6ed4a20f408ffe7b59883c7bc338943d}{initialize\+\_\+render\+\_\+task}} (\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_xohat_1_1_render___task_a23cb62f941ceb3952b372711eebfdaa4}{scene}})
+\begin{DoxyCompactList}\small\item\em Configuración inicial de la escena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_render___task_abdaed8ceb378c27f8d3f3e320f9a4df0}{set\+\_\+scene}} (\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}new\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em Setter de la escena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_render___task_aed870ed10b2b5270014d66e1c71a8c45}{add\+\_\+mesh\+\_\+component\+\_\+to\+\_\+meshes}} (\mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} \texorpdfstring{$\ast$}{*}entity)
+\begin{DoxyCompactList}\small\item\em Añade una entity con un mesh component (Como tienen todas) a la lista de meshes tras inicializarla como un cubo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_render___task_aecceae825d4ea4c59eb3710d89e9eed3}{run}} (float t) override
+\begin{DoxyCompactList}\small\item\em Ciclo de renderizado por medio del renderer de glt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_xohat_1_1_task_a61414073e04d39a5f5b1483d03bad372}{run}} (float t)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_mesh___component}{Mesh\+\_\+\+Component}} $>$ $>$ \mbox{\hyperlink{class_xohat_1_1_render___task_a6afa5bb47d3a13a75ee5fc6103db9479}{meshes}}
+\begin{DoxyCompactList}\small\item\em Lista de meshes añadidads. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ glt\+::\+Render\+\_\+\+Node $>$ \mbox{\hyperlink{class_xohat_1_1_render___task_a26762bfdde949dd75233faff0c78bec6}{renderer}}
+\begin{DoxyCompactList}\small\item\em Renderer de glt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_render___task_a23cb62f941ceb3952b372711eebfdaa4}{scene}}
+\begin{DoxyCompactList}\small\item\em Referencia a la escena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_xohat_1_1_render___task_aed870ed10b2b5270014d66e1c71a8c45}\label{class_xohat_1_1_render___task_aed870ed10b2b5270014d66e1c71a8c45} 
+\index{Xohat::Render\_Task@{Xohat::Render\_Task}!add\_mesh\_component\_to\_meshes@{add\_mesh\_component\_to\_meshes}}
+\index{add\_mesh\_component\_to\_meshes@{add\_mesh\_component\_to\_meshes}!Xohat::Render\_Task@{Xohat::Render\_Task}}
+\doxysubsubsection{\texorpdfstring{add\_mesh\_component\_to\_meshes()}{add\_mesh\_component\_to\_meshes()}}
+{\footnotesize\ttfamily void Xohat\+::\+Render\+\_\+\+Task\+::add\+\_\+mesh\+\_\+component\+\_\+to\+\_\+meshes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_xohat_1_1_entity}{Entity}} \texorpdfstring{$\ast$}{*}}]{entity }\end{DoxyParamCaption})}
+
+
+
+Añade una entity con un mesh component (Como tienen todas) a la lista de meshes tras inicializarla como un cubo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_render___task_a6ed4a20f408ffe7b59883c7bc338943d}\label{class_xohat_1_1_render___task_a6ed4a20f408ffe7b59883c7bc338943d} 
+\index{Xohat::Render\_Task@{Xohat::Render\_Task}!initialize\_render\_task@{initialize\_render\_task}}
+\index{initialize\_render\_task@{initialize\_render\_task}!Xohat::Render\_Task@{Xohat::Render\_Task}}
+\doxysubsubsection{\texorpdfstring{initialize\_render\_task()}{initialize\_render\_task()}}
+{\footnotesize\ttfamily void Xohat\+::\+Render\+\_\+\+Task\+::initialize\+\_\+render\+\_\+task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{scene }\end{DoxyParamCaption})}
+
+
+
+Configuración inicial de la escena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_render___task_aecceae825d4ea4c59eb3710d89e9eed3}\label{class_xohat_1_1_render___task_aecceae825d4ea4c59eb3710d89e9eed3} 
+\index{Xohat::Render\_Task@{Xohat::Render\_Task}!run@{run}}
+\index{run@{run}!Xohat::Render\_Task@{Xohat::Render\_Task}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Xohat\+::\+Render\+\_\+\+Task\+::run (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Ciclo de renderizado por medio del renderer de glt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_xohat_1_1_task_a61414073e04d39a5f5b1483d03bad372}{Xohat\+::\+Task}}.
+
+\Hypertarget{class_xohat_1_1_render___task_abdaed8ceb378c27f8d3f3e320f9a4df0}\label{class_xohat_1_1_render___task_abdaed8ceb378c27f8d3f3e320f9a4df0} 
+\index{Xohat::Render\_Task@{Xohat::Render\_Task}!set\_scene@{set\_scene}}
+\index{set\_scene@{set\_scene}!Xohat::Render\_Task@{Xohat::Render\_Task}}
+\doxysubsubsection{\texorpdfstring{set\_scene()}{set\_scene()}}
+{\footnotesize\ttfamily void Xohat\+::\+Render\+\_\+\+Task\+::set\+\_\+scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{new\+\_\+scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter de la escena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+scene} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_xohat_1_1_render___task_a6afa5bb47d3a13a75ee5fc6103db9479}\label{class_xohat_1_1_render___task_a6afa5bb47d3a13a75ee5fc6103db9479} 
+\index{Xohat::Render\_Task@{Xohat::Render\_Task}!meshes@{meshes}}
+\index{meshes@{meshes}!Xohat::Render\_Task@{Xohat::Render\_Task}}
+\doxysubsubsection{\texorpdfstring{meshes}{meshes}}
+{\footnotesize\ttfamily list$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xohat_1_1_mesh___component}{Mesh\+\_\+\+Component}} $>$ $>$ Xohat\+::\+Render\+\_\+\+Task\+::meshes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de meshes añadidads. 
+
+\Hypertarget{class_xohat_1_1_render___task_a26762bfdde949dd75233faff0c78bec6}\label{class_xohat_1_1_render___task_a26762bfdde949dd75233faff0c78bec6} 
+\index{Xohat::Render\_Task@{Xohat::Render\_Task}!renderer@{renderer}}
+\index{renderer@{renderer}!Xohat::Render\_Task@{Xohat::Render\_Task}}
+\doxysubsubsection{\texorpdfstring{renderer}{renderer}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$glt\+::\+Render\+\_\+\+Node$>$ Xohat\+::\+Render\+\_\+\+Task\+::renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Renderer de glt. 
+
+\Hypertarget{class_xohat_1_1_render___task_a23cb62f941ceb3952b372711eebfdaa4}\label{class_xohat_1_1_render___task_a23cb62f941ceb3952b372711eebfdaa4} 
+\index{Xohat::Render\_Task@{Xohat::Render\_Task}!scene@{scene}}
+\index{scene@{scene}!Xohat::Render\_Task@{Xohat::Render\_Task}}
+\doxysubsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_scene}{Scene}}\texorpdfstring{$\ast$}{*} Xohat\+::\+Render\+\_\+\+Task\+::scene\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referencia a la escena. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\mbox{\hyperlink{_render___task_8h}{Render\+\_\+\+Task.\+h}}\end{DoxyCompactItemize}

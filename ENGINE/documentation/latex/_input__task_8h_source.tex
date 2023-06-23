@@ -1,0 +1,69 @@
+\doxysection{Input\+\_\+task.\+h}
+\hypertarget{_input__task_8h_source}{}\label{_input__task_8h_source}\index{F:/Github/Engine\_Motores/ENGINE/code/headers/Input\_task.h@{F:/Github/Engine\_Motores/ENGINE/code/headers/Input\_task.h}}
+\mbox{\hyperlink{_input__task_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Copyright\ (c)\ 2023\ Arturo\ /\ Xohat}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ arturovilarc@gmail.com\ /\ xohatlatte@gmail.com}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ 2023.05\ -\/\ 2023.06}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_task_8h}{Task.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_keyboard_8hpp}{Keyboard.hpp}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_message_8h}{Message.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_xohat}{Xohat}}\ }
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Declaración adelantada\ de\ Scene}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }Scene;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_xohat_1_1_input___task}{Input\_Task}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_xohat_1_1_task}{Task}}}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61}{Input\_devices\_for\_messages}}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a3ba4e011846f8cafad29b7d6ec6c0346}{KEYBOARD\_KEY\_PRESSED}},}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aa8958e305fae8da97f443911d05d1790}{KEYBOARD\_A\_PRESSED}},}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ad1632592efb93937e08c484c7ee4241d}{KEYBOARD\_Q\_PRESSED}},}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ace5340a53c13580ceec8cc42cb8b6c70}{KEYBOARD\_S\_PRESSED}},}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a606aeebfc6645e1b680b956af3f7144d}{KEYBOARD\_W\_PRESSED}},}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ac5202a3c630962b1e5d5eb6ae10bcce9}{KEYBOARD\_U\_PRESSED}},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aad1b672711ad5eaf230a45ce0b688da4}{KEYBOARD\_H\_PRESSED}},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aada5dff957f9829b9861f1c5d213c812}{KEYBOARD\_J\_PRESSED}},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a57ad9f017dd20aae10fb0ca8ee3e748b}{KEYBOARD\_K\_PRESSED}},}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aefea327309f2859e919bbf1252410dde}{KEYBOARD\_KEY\_RELEASED}},}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a578103e6f3e8ee32b37194c94cfc911b}{MOUSE\_LEFT\_BUTTON\_PRESSED}},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Referencia\ a\ la\ escena}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene}{Scene}}*\ \mbox{\hyperlink{class_xohat_1_1_input___task_a1f006f16eabef6c18ab479a9066fb9ec}{scene}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ std::map<\ Input\_devices\_for\_messages,\ Message>\ \mbox{\hyperlink{class_xohat_1_1_input___task_a23a33f75099f995a7ce724fc3f5c0438}{input\_m\_mapping}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a5be1aa921ef59bd31e0cccf9dcd6e8ab}{Input\_Task}}(\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}}*\ given\_scene)}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a1f006f16eabef6c18ab479a9066fb9ec}{scene}}\ =\ given\_scene;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_input___task_a514c11bb2e34e4adb70d333ee368134b}{add\_Input}}(\mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61}{Input\_devices\_for\_messages}}\ event,\ std::string\&\&\ messageID)}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_xohat_1_1_message}{Message}}\ message(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ message.\mbox{\hyperlink{struct_xohat_1_1_message_ac273a03c9bf71c08d8feff802fdcd3eb}{id}}\ =\ messageID;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task_a23a33f75099f995a7ce724fc3f5c0438}{input\_m\_mapping}}[event]\ =\ message;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_input___task_a9d49b0216fd9c9575119437a947c0928}{run}}(\textcolor{keywordtype}{float}\ t)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00082\ \ \ \ \ \};}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+
+\end{DoxyCode}

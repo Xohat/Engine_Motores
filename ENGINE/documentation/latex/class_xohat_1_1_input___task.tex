@@ -1,0 +1,187 @@
+\doxysection{Xohat\+::Input\+\_\+\+Task Class Reference}
+\hypertarget{class_xohat_1_1_input___task}{}\label{class_xohat_1_1_input___task}\index{Xohat::Input\_Task@{Xohat::Input\_Task}}
+
+
+{\ttfamily \#include $<$Input\+\_\+task.\+h$>$}
+
+Inheritance diagram for Xohat\+::Input\+\_\+\+Task\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_xohat_1_1_input___task}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61}{Input\+\_\+devices\+\_\+for\+\_\+messages}} \{ \newline
+\mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a3ba4e011846f8cafad29b7d6ec6c0346}{KEYBOARD\+\_\+\+KEY\+\_\+\+PRESSED}}
+, \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aa8958e305fae8da97f443911d05d1790}{KEYBOARD\+\_\+\+A\+\_\+\+PRESSED}}
+, \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ad1632592efb93937e08c484c7ee4241d}{KEYBOARD\+\_\+\+Q\+\_\+\+PRESSED}}
+, \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ace5340a53c13580ceec8cc42cb8b6c70}{KEYBOARD\+\_\+\+S\+\_\+\+PRESSED}}
+, \newline
+\mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a606aeebfc6645e1b680b956af3f7144d}{KEYBOARD\+\_\+\+W\+\_\+\+PRESSED}}
+, \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ac5202a3c630962b1e5d5eb6ae10bcce9}{KEYBOARD\+\_\+\+U\+\_\+\+PRESSED}}
+, \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aad1b672711ad5eaf230a45ce0b688da4}{KEYBOARD\+\_\+\+H\+\_\+\+PRESSED}}
+, \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aada5dff957f9829b9861f1c5d213c812}{KEYBOARD\+\_\+\+J\+\_\+\+PRESSED}}
+, \newline
+\mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a57ad9f017dd20aae10fb0ca8ee3e748b}{KEYBOARD\+\_\+\+K\+\_\+\+PRESSED}}
+, \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aefea327309f2859e919bbf1252410dde}{KEYBOARD\+\_\+\+KEY\+\_\+\+RELEASED}}
+, \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a578103e6f3e8ee32b37194c94cfc911b}{MOUSE\+\_\+\+LEFT\+\_\+\+BUTTON\+\_\+\+PRESSED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumaerador de. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_input___task_a5be1aa921ef59bd31e0cccf9dcd6e8ab}{Input\+\_\+\+Task}} (\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}given\+\_\+scene)
+\begin{DoxyCompactList}\small\item\em Constructor de Input\+\_\+task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_input___task_a514c11bb2e34e4adb70d333ee368134b}{add\+\_\+\+Input}} (\mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61}{Input\+\_\+devices\+\_\+for\+\_\+messages}} event, std\+::string \&\&message\+ID)
+\begin{DoxyCompactList}\small\item\em Añade el evento de input por la id proporcionada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_xohat_1_1_input___task_a9d49b0216fd9c9575119437a947c0928}{run}} (float t) override
+\begin{DoxyCompactList}\small\item\em Se encarga de recibir todos los inputs por parte de teclado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_xohat_1_1_task_a61414073e04d39a5f5b1483d03bad372}{run}} (float t)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_xohat_1_1_input___task_a1f006f16eabef6c18ab479a9066fb9ec}{scene}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61}{Input\+\_\+devices\+\_\+for\+\_\+messages}}, \mbox{\hyperlink{struct_xohat_1_1_message}{Message}} $>$ \mbox{\hyperlink{class_xohat_1_1_input___task_a23a33f75099f995a7ce724fc3f5c0438}{input\+\_\+m\+\_\+mapping}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61} 
+\index{Xohat::Input\_Task@{Xohat::Input\_Task}!Input\_devices\_for\_messages@{Input\_devices\_for\_messages}}
+\index{Input\_devices\_for\_messages@{Input\_devices\_for\_messages}!Xohat::Input\_Task@{Xohat::Input\_Task}}
+\doxysubsubsection{\texorpdfstring{Input\_devices\_for\_messages}{Input\_devices\_for\_messages}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61}{Xohat\+::\+Input\+\_\+\+Task\+::\+Input\+\_\+devices\+\_\+for\+\_\+messages}}}
+
+
+
+Enumaerador de. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYBOARD\_KEY\_PRESSED@{KEYBOARD\_KEY\_PRESSED}!Xohat::Input\_Task@{Xohat::Input\_Task}}\index{Xohat::Input\_Task@{Xohat::Input\_Task}!KEYBOARD\_KEY\_PRESSED@{KEYBOARD\_KEY\_PRESSED}}}\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a3ba4e011846f8cafad29b7d6ec6c0346}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a3ba4e011846f8cafad29b7d6ec6c0346} 
+KEYBOARD\+\_\+\+KEY\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYBOARD\_A\_PRESSED@{KEYBOARD\_A\_PRESSED}!Xohat::Input\_Task@{Xohat::Input\_Task}}\index{Xohat::Input\_Task@{Xohat::Input\_Task}!KEYBOARD\_A\_PRESSED@{KEYBOARD\_A\_PRESSED}}}\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aa8958e305fae8da97f443911d05d1790}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aa8958e305fae8da97f443911d05d1790} 
+KEYBOARD\+\_\+\+A\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYBOARD\_Q\_PRESSED@{KEYBOARD\_Q\_PRESSED}!Xohat::Input\_Task@{Xohat::Input\_Task}}\index{Xohat::Input\_Task@{Xohat::Input\_Task}!KEYBOARD\_Q\_PRESSED@{KEYBOARD\_Q\_PRESSED}}}\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ad1632592efb93937e08c484c7ee4241d}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ad1632592efb93937e08c484c7ee4241d} 
+KEYBOARD\+\_\+\+Q\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYBOARD\_S\_PRESSED@{KEYBOARD\_S\_PRESSED}!Xohat::Input\_Task@{Xohat::Input\_Task}}\index{Xohat::Input\_Task@{Xohat::Input\_Task}!KEYBOARD\_S\_PRESSED@{KEYBOARD\_S\_PRESSED}}}\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ace5340a53c13580ceec8cc42cb8b6c70}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ace5340a53c13580ceec8cc42cb8b6c70} 
+KEYBOARD\+\_\+\+S\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYBOARD\_W\_PRESSED@{KEYBOARD\_W\_PRESSED}!Xohat::Input\_Task@{Xohat::Input\_Task}}\index{Xohat::Input\_Task@{Xohat::Input\_Task}!KEYBOARD\_W\_PRESSED@{KEYBOARD\_W\_PRESSED}}}\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a606aeebfc6645e1b680b956af3f7144d}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a606aeebfc6645e1b680b956af3f7144d} 
+KEYBOARD\+\_\+\+W\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYBOARD\_U\_PRESSED@{KEYBOARD\_U\_PRESSED}!Xohat::Input\_Task@{Xohat::Input\_Task}}\index{Xohat::Input\_Task@{Xohat::Input\_Task}!KEYBOARD\_U\_PRESSED@{KEYBOARD\_U\_PRESSED}}}\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ac5202a3c630962b1e5d5eb6ae10bcce9}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61ac5202a3c630962b1e5d5eb6ae10bcce9} 
+KEYBOARD\+\_\+\+U\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYBOARD\_H\_PRESSED@{KEYBOARD\_H\_PRESSED}!Xohat::Input\_Task@{Xohat::Input\_Task}}\index{Xohat::Input\_Task@{Xohat::Input\_Task}!KEYBOARD\_H\_PRESSED@{KEYBOARD\_H\_PRESSED}}}\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aad1b672711ad5eaf230a45ce0b688da4}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aad1b672711ad5eaf230a45ce0b688da4} 
+KEYBOARD\+\_\+\+H\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYBOARD\_J\_PRESSED@{KEYBOARD\_J\_PRESSED}!Xohat::Input\_Task@{Xohat::Input\_Task}}\index{Xohat::Input\_Task@{Xohat::Input\_Task}!KEYBOARD\_J\_PRESSED@{KEYBOARD\_J\_PRESSED}}}\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aada5dff957f9829b9861f1c5d213c812}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aada5dff957f9829b9861f1c5d213c812} 
+KEYBOARD\+\_\+\+J\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYBOARD\_K\_PRESSED@{KEYBOARD\_K\_PRESSED}!Xohat::Input\_Task@{Xohat::Input\_Task}}\index{Xohat::Input\_Task@{Xohat::Input\_Task}!KEYBOARD\_K\_PRESSED@{KEYBOARD\_K\_PRESSED}}}\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a57ad9f017dd20aae10fb0ca8ee3e748b}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a57ad9f017dd20aae10fb0ca8ee3e748b} 
+KEYBOARD\+\_\+\+K\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYBOARD\_KEY\_RELEASED@{KEYBOARD\_KEY\_RELEASED}!Xohat::Input\_Task@{Xohat::Input\_Task}}\index{Xohat::Input\_Task@{Xohat::Input\_Task}!KEYBOARD\_KEY\_RELEASED@{KEYBOARD\_KEY\_RELEASED}}}\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aefea327309f2859e919bbf1252410dde}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61aefea327309f2859e919bbf1252410dde} 
+KEYBOARD\+\_\+\+KEY\+\_\+\+RELEASED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOUSE\_LEFT\_BUTTON\_PRESSED@{MOUSE\_LEFT\_BUTTON\_PRESSED}!Xohat::Input\_Task@{Xohat::Input\_Task}}\index{Xohat::Input\_Task@{Xohat::Input\_Task}!MOUSE\_LEFT\_BUTTON\_PRESSED@{MOUSE\_LEFT\_BUTTON\_PRESSED}}}\Hypertarget{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a578103e6f3e8ee32b37194c94cfc911b}\label{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61a578103e6f3e8ee32b37194c94cfc911b} 
+MOUSE\+\_\+\+LEFT\+\_\+\+BUTTON\+\_\+\+PRESSED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_xohat_1_1_input___task_a5be1aa921ef59bd31e0cccf9dcd6e8ab}\label{class_xohat_1_1_input___task_a5be1aa921ef59bd31e0cccf9dcd6e8ab} 
+\index{Xohat::Input\_Task@{Xohat::Input\_Task}!Input\_Task@{Input\_Task}}
+\index{Input\_Task@{Input\_Task}!Xohat::Input\_Task@{Xohat::Input\_Task}}
+\doxysubsubsection{\texorpdfstring{Input\_Task()}{Input\_Task()}}
+{\footnotesize\ttfamily Xohat\+::\+Input\+\_\+\+Task\+::\+Input\+\_\+\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}} \texorpdfstring{$\ast$}{*}}]{given\+\_\+scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de Input\+\_\+task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+scene} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_xohat_1_1_input___task_a514c11bb2e34e4adb70d333ee368134b}\label{class_xohat_1_1_input___task_a514c11bb2e34e4adb70d333ee368134b} 
+\index{Xohat::Input\_Task@{Xohat::Input\_Task}!add\_Input@{add\_Input}}
+\index{add\_Input@{add\_Input}!Xohat::Input\_Task@{Xohat::Input\_Task}}
+\doxysubsubsection{\texorpdfstring{add\_Input()}{add\_Input()}}
+{\footnotesize\ttfamily void Xohat\+::\+Input\+\_\+\+Task\+::add\+\_\+\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61}{Input\+\_\+devices\+\_\+for\+\_\+messages}}}]{event,  }\item[{std\+::string \&\&}]{message\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Añade el evento de input por la id proporcionada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em message\+ID} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_xohat_1_1_input___task_a9d49b0216fd9c9575119437a947c0928}\label{class_xohat_1_1_input___task_a9d49b0216fd9c9575119437a947c0928} 
+\index{Xohat::Input\_Task@{Xohat::Input\_Task}!run@{run}}
+\index{run@{run}!Xohat::Input\_Task@{Xohat::Input\_Task}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Xohat\+::\+Input\+\_\+\+Task\+::run (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Se encarga de recibir todos los inputs por parte de teclado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_xohat_1_1_task_a61414073e04d39a5f5b1483d03bad372}{Xohat\+::\+Task}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_xohat_1_1_input___task_a23a33f75099f995a7ce724fc3f5c0438}\label{class_xohat_1_1_input___task_a23a33f75099f995a7ce724fc3f5c0438} 
+\index{Xohat::Input\_Task@{Xohat::Input\_Task}!input\_m\_mapping@{input\_m\_mapping}}
+\index{input\_m\_mapping@{input\_m\_mapping}!Xohat::Input\_Task@{Xohat::Input\_Task}}
+\doxysubsubsection{\texorpdfstring{input\_m\_mapping}{input\_m\_mapping}}
+{\footnotesize\ttfamily std\+::map$<$ \mbox{\hyperlink{class_xohat_1_1_input___task_a7ac1c29d72fd3d6c945729b115b7fb61}{Input\+\_\+devices\+\_\+for\+\_\+messages}}, \mbox{\hyperlink{struct_xohat_1_1_message}{Message}}$>$ Xohat\+::\+Input\+\_\+\+Task\+::input\+\_\+m\+\_\+mapping\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_xohat_1_1_input___task_a1f006f16eabef6c18ab479a9066fb9ec}\label{class_xohat_1_1_input___task_a1f006f16eabef6c18ab479a9066fb9ec} 
+\index{Xohat::Input\_Task@{Xohat::Input\_Task}!scene@{scene}}
+\index{scene@{scene}!Xohat::Input\_Task@{Xohat::Input\_Task}}
+\doxysubsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_xohat_1_1_scene}{Scene}}\texorpdfstring{$\ast$}{*} Xohat\+::\+Input\+\_\+\+Task\+::scene\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\mbox{\hyperlink{_input__task_8h}{Input\+\_\+task.\+h}}\end{DoxyCompactItemize}

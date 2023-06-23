@@ -1,0 +1,138 @@
+\doxysection{Scene.\+h}
+\hypertarget{_scene_8h_source}{}\label{_scene_8h_source}\index{F:/Github/Engine\_Motores/ENGINE/code/headers/Scene.h@{F:/Github/Engine\_Motores/ENGINE/code/headers/Scene.h}}
+\mbox{\hyperlink{_scene_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Copyright\ (c)\ 2023\ Arturo\ /\ Xohat}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ arturovilarc@gmail.com\ /\ xohatlatte@gmail.com}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ 2023.05\ -\/\ 2023.06}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_kernel_8h}{Kernel.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_window_8h}{Window.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_entity_8h}{Entity.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_input__task_8h}{Input\_task.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_render___task_8h}{Render\_Task.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_update__task_8h}{Update\_task.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_sample___renderer_8hpp}{Sample\_Renderer.hpp}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_message_8h}{Message.h}}"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespaceengine}{engine}};}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespaceglt}{glt}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_xohat}{Xohat}}\ }
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_xohat_1_1_scene}{Scene}}\ }
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_kernel}{Kernel}}\ \mbox{\hyperlink{class_xohat_1_1_scene_af82878bede1af0998f8bb540e64225e3}{kernel}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task}{Input\_Task}}*\ \mbox{\hyperlink{class_xohat_1_1_scene_a138ac61b1a756f47c9e780e7cad1e79b}{i\_task}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_render___task}{Render\_Task}}*\ \mbox{\hyperlink{class_xohat_1_1_scene_a6c9db5a6cffce8905cd22fc86de3ee13}{r\_task}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_update__task}{Update\_task}}*\ \mbox{\hyperlink{class_xohat_1_1_scene_ac258e7c8323eb2cee9e5385724640143}{u\_task}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_message___dispatcher}{Message\_Dispatcher}}*\ \mbox{\hyperlink{class_xohat_1_1_scene_a3b763784ec8697b782b1a8d2682ae728}{message\_dispatcher}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ map<\ string,\ shared\_ptr<Entity>\ >\ \mbox{\hyperlink{class_xohat_1_1_scene_a091e8c22bcf6e7284e7c509787246268}{entities}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//ID\ \ \ //Object\ Pointer}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_window}{Window}}\ *\ \mbox{\hyperlink{class_xohat_1_1_scene_ad1c0a2e9cd862d5f1bcf82c3edd467e3}{window}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_ab56da8b945177d636ff6cdecfb7a0bb8}{Scene}}(\mbox{\hyperlink{class_xohat_1_1_window}{Window}}\&\ given\_window)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_ad1c0a2e9cd862d5f1bcf82c3edd467e3}{window}}\ =\ \&given\_window;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_ad1c0a2e9cd862d5f1bcf82c3edd467e3}{window}}-\/>\mbox{\hyperlink{class_xohat_1_1_window_adeab014ee094f5e161f8509120cea0bb}{enable\_vsync}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_a3b763784ec8697b782b1a8d2682ae728}{message\_dispatcher}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_xohat_1_1_message___dispatcher}{Message\_Dispatcher}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Asignación de\ Tasks}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_a138ac61b1a756f47c9e780e7cad1e79b}{i\_task}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_xohat_1_1_input___task}{Input\_Task}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_ac258e7c8323eb2cee9e5385724640143}{u\_task}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_xohat_1_1_update__task}{Update\_task}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_a6c9db5a6cffce8905cd22fc86de3ee13}{r\_task}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_xohat_1_1_render___task}{Render\_Task}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creación del\ contexto\ básico\ de\ OpenGlToolkit}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_a6c9db5a6cffce8905cd22fc86de3ee13}{r\_task}}-\/>\mbox{\hyperlink{class_xohat_1_1_render___task_a6ed4a20f408ffe7b59883c7bc338943d}{initialize\_render\_task}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creación de\ Entidades}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_ad471e5bbaceed6c46d6b7241009e1561}{create\_entity}}(*\mbox{\hyperlink{class_xohat_1_1_scene_a6c9db5a6cffce8905cd22fc86de3ee13}{r\_task}},\ \textcolor{stringliteral}{"{}Right\_wall\_entity"{}}\ \ \ ,\ \{\ 4.5f,\ 0,\ 0\ \}\ \ \ \ ,\ \{\ 0.25f,\ 1,\ 0.25f\ \});}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_ad471e5bbaceed6c46d6b7241009e1561}{create\_entity}}(*\mbox{\hyperlink{class_xohat_1_1_scene_a6c9db5a6cffce8905cd22fc86de3ee13}{r\_task}},\ \textcolor{stringliteral}{"{}Left\_wall\_entity"{}}\ \ \ \ ,\ \{\ -\/4.5f,\ 0,\ 0\ \}\ \ \ ,\ \{\ 0.25f,\ 1,\ 0.25f\ \});}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_ad471e5bbaceed6c46d6b7241009e1561}{create\_entity}}(*\mbox{\hyperlink{class_xohat_1_1_scene_a6c9db5a6cffce8905cd22fc86de3ee13}{r\_task}},\ \textcolor{stringliteral}{"{}Ball\_entity"{}}\ \ \ \ \ ,\ \{\ 0,\ 0,\ 0\ \}\ \ \ \ \ \ \ ,\ \{\ 0.25f,\ 0.25f,\ 0.25f\ \});}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Asignacion\ de\ tasks\ para\ la\ escena}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_af82878bede1af0998f8bb540e64225e3}{kernel}}.\mbox{\hyperlink{class_xohat_1_1_kernel_ac3794d6ac842c86d252ac1b990ee98ab}{add\_task}}(\mbox{\hyperlink{class_xohat_1_1_scene_a138ac61b1a756f47c9e780e7cad1e79b}{i\_task}});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_af82878bede1af0998f8bb540e64225e3}{kernel}}.\mbox{\hyperlink{class_xohat_1_1_kernel_ac3794d6ac842c86d252ac1b990ee98ab}{add\_task}}(\mbox{\hyperlink{class_xohat_1_1_scene_a6c9db5a6cffce8905cd22fc86de3ee13}{r\_task}});}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_af82878bede1af0998f8bb540e64225e3}{kernel}}.\mbox{\hyperlink{class_xohat_1_1_kernel_ac3794d6ac842c86d252ac1b990ee98ab}{add\_task}}(\mbox{\hyperlink{class_xohat_1_1_scene_ac258e7c8323eb2cee9e5385724640143}{u\_task}});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_scene_ad471e5bbaceed6c46d6b7241009e1561}{create\_entity}}(\mbox{\hyperlink{class_xohat_1_1_render___task}{Render\_Task}}\&\ render\_task,\ \textcolor{keywordtype}{string}\ entity\_name,\ glm::vec3\ position,\ glm::vec3\ scale)}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ crea\ una\ entidad\ vácia}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ shared\_ptr<Entity>\ entity\_to\_add\ =\ make\_shared<Entity>(\textcolor{keyword}{this});}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ entity\_to\_add-\/>set\_name(entity\_name);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configuración de\ valores\ iniciales}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ render\_task.\mbox{\hyperlink{class_xohat_1_1_render___task_aed870ed10b2b5270014d66e1c71a8c45}{add\_mesh\_component\_to\_meshes}}(entity\_to\_add.get());}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ entity\_to\_add-\/>get\_transform()-\/>set\_position(position);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ entity\_to\_add-\/>get\_transform()-\/>set\_scale(scale);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Añade\ la\ entidad\ al\ mapa\ de\ entidades\ tras\ configurarase}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_a3b65e7ae76a34a1fffcdd0c599b4bac7}{add\_entity}}(entity\_to\_add-\/>get\_name(),\ entity\_to\_add);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_scene_a6dfb34861370b045fd2b39b37a520aef}{add\_update\_component\_to\_entity}}(\textcolor{keywordtype}{string}\ entity\_id,\ std::shared\_ptr<Update\_Component>\ update\_c)}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ shared\_ptr<Entity>\ entity\ =\ \mbox{\hyperlink{class_xohat_1_1_scene_a091e8c22bcf6e7284e7c509787246268}{entities}}[entity\_id];}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ entity-\/>update\_comp\ =\ update\_c;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ update\_c-\/>set\_owner(entity.get());}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_ac258e7c8323eb2cee9e5385724640143}{u\_task}}-\/>\mbox{\hyperlink{class_xohat_1_1_update__task_ab0c517f5c49b81005a030edf15b92d66}{add\_update\_component}}(update\_c);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_window}{Window}}*\ \mbox{\hyperlink{class_xohat_1_1_scene_a70db3967dd6d35f44473626032cc8f70}{get\_window}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00135\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_xohat_1_1_scene_ad1c0a2e9cd862d5f1bcf82c3edd467e3}{window}};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_message___dispatcher}{Message\_Dispatcher}}*\ \mbox{\hyperlink{class_xohat_1_1_scene_a28a1c74c454560fcfc55609569c53bd6}{get\_dispatcher}}()\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_xohat_1_1_scene_a3b763784ec8697b782b1a8d2682ae728}{message\_dispatcher}};}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_scene_a5b71b7a09e44dfbf960736f126130bb2}{stop}}()\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_af82878bede1af0998f8bb540e64225e3}{kernel}}.\mbox{\hyperlink{class_xohat_1_1_kernel_ab989bfeb671c39c1cab3dc210310b44d}{stop}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_scene_a0b08ff0149687c8ec16e328d074a598a}{run}}()\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_af82878bede1af0998f8bb540e64225e3}{kernel}}.\mbox{\hyperlink{class_xohat_1_1_kernel_ac055b6d2bf75937ced423be238c4a0f7}{run}}();}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_scene_a3b65e7ae76a34a1fffcdd0c599b4bac7}{add\_entity}}(\textcolor{keywordtype}{string}\ ID,\ shared\_ptr<\ Entity\ >\ entity\_to\_add)}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_xohat_1_1_scene_a091e8c22bcf6e7284e7c509787246268}{entities}}.count(ID))\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_scene_a091e8c22bcf6e7284e7c509787246268}{entities}}[ID]\ =\ entity\_to\_add;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_input___task}{Input\_Task}}*\ \mbox{\hyperlink{class_xohat_1_1_scene_a37a449e8266cd566e9cd4c51150c1973}{get\_input\_task}}()\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_xohat_1_1_scene_a138ac61b1a756f47c9e780e7cad1e79b}{i\_task}};}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ map<\ string,\ shared\_ptr<\ Entity\ >\ >\ \mbox{\hyperlink{class_xohat_1_1_scene_a4c664ace87e161113ec0d3d4eac69883}{get\_entity}}()}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_xohat_1_1_scene_a091e8c22bcf6e7284e7c509787246268}{entities}};}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \};}
+\DoxyCodeLine{00195\ \}}
+
+\end{DoxyCode}

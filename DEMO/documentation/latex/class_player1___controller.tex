@@ -1,0 +1,100 @@
+\doxysection{Player1\+\_\+\+Controller Class Reference}
+\hypertarget{class_player1___controller}{}\label{class_player1___controller}\index{Player1\_Controller@{Player1\_Controller}}
+
+
+{\ttfamily \#include $<$Player1\+\_\+\+Controller.\+h$>$}
+
+Inheritance diagram for Player1\+\_\+\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player1___controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_player1___controller_a55cf5d6c1a2596b08dc4980c12036b09}{get\+\_\+current\+\_\+pos}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la posición actual del jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player1___controller_a1dc512a42e40a88596528ded9c18fba3}{update}} (float t) override
+\begin{DoxyCompactList}\small\item\em El update ocurre una vez por fotograma y revisa, primero la posición actual del jugador, tras esto revisa si el mensaje ha sidor ecibido para alguna de las dos acciones y lo ejecuta si es asi, al acabar de pulsar se vuelve a marcar la señal como falsa para poder escribirla otra vez. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player___listener}{Player\+\_\+\+Listener}} \mbox{\hyperlink{class_player1___controller_a0d71f1e57ee22eb5ec2d12e0ae39765a}{player1\+\_\+up\+\_\+listener}}
+\begin{DoxyCompactList}\small\item\em Listener para las acciones de ascenso. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player___listener}{Player\+\_\+\+Listener}} \mbox{\hyperlink{class_player1___controller_afc2c4fba5d42986e16d875e0093b1623}{player1\+\_\+down\+\_\+listener}}
+\begin{DoxyCompactList}\small\item\em Listener para las acciones de descenso. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_player1___controller_a6b285b82850d00558dd66702713c9b1d}{position}}
+\begin{DoxyCompactList}\small\item\em Variable de posición del jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player1___controller_a55cf5d6c1a2596b08dc4980c12036b09}\label{class_player1___controller_a55cf5d6c1a2596b08dc4980c12036b09} 
+\index{Player1\_Controller@{Player1\_Controller}!get\_current\_pos@{get\_current\_pos}}
+\index{get\_current\_pos@{get\_current\_pos}!Player1\_Controller@{Player1\_Controller}}
+\doxysubsubsection{\texorpdfstring{get\_current\_pos()}{get\_current\_pos()}}
+{\footnotesize\ttfamily glm\+::vec3 Player1\+\_\+\+Controller\+::get\+\_\+current\+\_\+pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la posición actual del jugador. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_player1___controller_a1dc512a42e40a88596528ded9c18fba3}\label{class_player1___controller_a1dc512a42e40a88596528ded9c18fba3} 
+\index{Player1\_Controller@{Player1\_Controller}!update@{update}}
+\index{update@{update}!Player1\_Controller@{Player1\_Controller}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Player1\+\_\+\+Controller\+::update (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+El update ocurre una vez por fotograma y revisa, primero la posición actual del jugador, tras esto revisa si el mensaje ha sidor ecibido para alguna de las dos acciones y lo ejecuta si es asi, al acabar de pulsar se vuelve a marcar la señal como falsa para poder escribirla otra vez. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_player1___controller_afc2c4fba5d42986e16d875e0093b1623}\label{class_player1___controller_afc2c4fba5d42986e16d875e0093b1623} 
+\index{Player1\_Controller@{Player1\_Controller}!player1\_down\_listener@{player1\_down\_listener}}
+\index{player1\_down\_listener@{player1\_down\_listener}!Player1\_Controller@{Player1\_Controller}}
+\doxysubsubsection{\texorpdfstring{player1\_down\_listener}{player1\_down\_listener}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player___listener}{Player\+\_\+\+Listener}} Player1\+\_\+\+Controller\+::player1\+\_\+down\+\_\+listener}
+
+
+
+Listener para las acciones de descenso. 
+
+\Hypertarget{class_player1___controller_a0d71f1e57ee22eb5ec2d12e0ae39765a}\label{class_player1___controller_a0d71f1e57ee22eb5ec2d12e0ae39765a} 
+\index{Player1\_Controller@{Player1\_Controller}!player1\_up\_listener@{player1\_up\_listener}}
+\index{player1\_up\_listener@{player1\_up\_listener}!Player1\_Controller@{Player1\_Controller}}
+\doxysubsubsection{\texorpdfstring{player1\_up\_listener}{player1\_up\_listener}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player___listener}{Player\+\_\+\+Listener}} Player1\+\_\+\+Controller\+::player1\+\_\+up\+\_\+listener}
+
+
+
+Listener para las acciones de ascenso. 
+
+\Hypertarget{class_player1___controller_a6b285b82850d00558dd66702713c9b1d}\label{class_player1___controller_a6b285b82850d00558dd66702713c9b1d} 
+\index{Player1\_Controller@{Player1\_Controller}!position@{position}}
+\index{position@{position}!Player1\_Controller@{Player1\_Controller}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily glm\+::vec3 Player1\+\_\+\+Controller\+::position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Variable de posición del jugador. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+DEMO/code/\mbox{\hyperlink{_player1___controller_8h}{Player1\+\_\+\+Controller.\+h}}\end{DoxyCompactItemize}

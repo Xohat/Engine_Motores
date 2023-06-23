@@ -1,0 +1,7 @@
+Ejecucción:
+
+Para poder ejecutarlo
+
+Se debe acceder a la carpeta de DEMO y ejecutar la solución de Sandbox.sln
+A raiz de eso se abrira visual studio 2022 y puedes ejecutar el programa por medio de el proyecto enlazado DEMO con el boton de arriba del depurador local de windows
+

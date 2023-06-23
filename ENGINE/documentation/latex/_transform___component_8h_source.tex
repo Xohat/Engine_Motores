@@ -1,0 +1,62 @@
+\doxysection{Transform\+\_\+\+Component.\+h}
+\hypertarget{_transform___component_8h_source}{}\label{_transform___component_8h_source}\index{F:/Github/Engine\_Motores/ENGINE/code/headers/Transform\_Component.h@{F:/Github/Engine\_Motores/ENGINE/code/headers/Transform\_Component.h}}
+\mbox{\hyperlink{_transform___component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Copyright\ (c)\ 2023\ Arturo\ /\ Xohat}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ arturovilarc@gmail.com\ /\ xohatlatte@gmail.com}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ 2023.05\ -\/\ 2023.06}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}glm/glm.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_components_8h}{Components.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}string"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }std::string;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_xohat}{Xohat}}\ }
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Orden:\ Escala,\ rotación, translación}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_xohat_1_1_transform___component}{Transform\_Component}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_xohat_1_1_component}{Component}}}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Variables}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_xohat_1_1_transform___component_a61af345a4a0ee9caaeb07043955cae86}{position}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_xohat_1_1_transform___component_af8f64223cf3341010315e720ebdd828e}{scale}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_xohat_1_1_transform___component_a7112b891d5a8840419ed1b9ef929eeca}{euler\_angles}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:\ \ \ \ \ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_transform___component_a61f3e0f262c1f243cc539578c187918c}{Transform\_Component}}()\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_transform___component_a61af345a4a0ee9caaeb07043955cae86}{position}}\ \ \ \ \ \ \ \ =\ \ \ \{\ 0,\ 0,\ 0\ \};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_transform___component_af8f64223cf3341010315e720ebdd828e}{scale}}\ \ \ \ \ \ \ \ \ \ =\ \ \ \{\ 1,\ 1,\ 1\ \};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_transform___component_a7112b891d5a8840419ed1b9ef929eeca}{euler\_angles}}\ \ \ \ =\ \ \ \{\ 0,\ 0,\ 0\ \};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_xohat_1_1_transform___component_a4afd8d784e810d0c04b3bc6eac7e4c8a}{get\_position}}()\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_xohat_1_1_transform___component_a61af345a4a0ee9caaeb07043955cae86}{position}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_transform___component_a6666b29be6405b55eb403ad869a265a2}{set\_position}}(glm::vec3\ new\_position)}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_transform___component_a61af345a4a0ee9caaeb07043955cae86}{position}}\ =\ new\_position;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_xohat_1_1_transform___component_aac50b83c917fb5dedae319570dbfcdc5}{set\_scale}}(glm::vec3\ new\_scale)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_xohat_1_1_transform___component_af8f64223cf3341010315e720ebdd828e}{scale}}\ =\ new\_scale;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ glm::mat4\ \mbox{\hyperlink{class_xohat_1_1_transform___component_a3e9ada6646507f2607e77289969e1317}{get\_matrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_xohat_1_1_transform___component_af0b267ca707c50411688eb1265fa88e1}{name}}()}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Transform\_Component"{}};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \};}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}

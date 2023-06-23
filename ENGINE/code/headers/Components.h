@@ -1,10 +1,18 @@
-#pragma once
+/**
+* @file Component.h
+* @brief Padre de los hijos llamados Algo_Component
+* @author Arturo Vilar Carretero
+*/
 
-#include "glm/glm.hpp"
+// Copyright (c) 2023 Arturo / Xohat
+// arturovilarc@gmail.com / xohatlatte@gmail.com
+// 2023.05 - 2023.06
+
+#pragma once
 
 namespace Xohat 
 {
-	
+	// Declaración adelantada de Entity
 	class Entity;
 
 	class Component
@@ -12,79 +20,27 @@ namespace Xohat
 
 	protected:
 
+		// Todos los componentes requiren tener a un owner
 		Entity* owner;
 
-		// métodos get / set
-	};
-
-	class Transform_Component : public Component
-	{
-		glm::vec3 position;
-		glm::vec3 scale;
-		glm::vec3 euler_angles;
-
 	public:
 
-		void set_position(glm::vec3 new_position)
+		/// <summary>
+		/// Getter de owner
+		/// </summary>
+		/// <returns></returns>
+		Entity* get_owner()
 		{
-			position = new_position;
+			return owner;
 		}
 
-		void set_scale(glm::vec3 new_scale)
+		/// <summary>
+		/// Setter de owner
+		/// </summary>
+		/// <param name="new_owner"></param>
+		void set_owner(Entity* new_owner)
 		{
-			scale = new_scale;
+			owner = new_owner;
 		}
-
-		glm::mat4 get_matrix() const;
 	};
-
-	/*
-	class Mesh_Component : public Component
-	{
-		// shared_ptr <glt::Model> model;
-	};
-
-	class Collider_Component : public Component
-	{
-		// colisiones
-	};
-
-	class Controller
-	{
-	public:
-		virtual void update(float t) = 0;
-	};
-
-	class Control_Component : public Component
-	{
-		Controller* controller;
-	};
-
-	class Racket_Controler : public Controller, public Message_Listener
-	{
-
-	public:
-
-		void update(Scene& scene, Entity& entitiy, float t)
-		{
-			// preguntar a la escena por otras entidades
-			// mover entity
-			// etc.
-		}
-
-		/*
-		void handle(const Message& m)
-		{
-			if (m.id == "subir")
-			{
-				//Mover transform component arriba
-			}
-			else if (m.id == "bajar")
-			{
-				//mover transform component abajo
-			}
-		}
-		
-	};
-	*/
 }

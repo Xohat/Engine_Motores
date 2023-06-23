@@ -1,0 +1,35 @@
+\doxysection{F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\+Message.h File Reference}
+\hypertarget{_message_8h}{}\label{_message_8h}\index{F:/Github/Engine\_Motores/ENGINE/code/headers/Message.h@{F:/Github/Engine\_Motores/ENGINE/code/headers/Message.h}}
+
+
+Código relacionado con el sistema de mensajería.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \"{}glm/glm.\+hpp\"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_xohat_1_1_message}{Xohat\+::\+Message}}
+\begin{DoxyCompactList}\small\item\em Mensaje básico, solo presenta una ID. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_xohat_1_1_message___listener}{Xohat\+::\+Message\+\_\+\+Listener}}
+\begin{DoxyCompactList}\small\item\em Encargado de escuchar los mensajes, la variable received se usa para activar o desactivar el movimiento de los objetos player en el proyecto de Sandbox. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_xohat_1_1_message___dispatcher}{Xohat\+::\+Message\+\_\+\+Dispatcher}}
+\begin{DoxyCompactList}\small\item\em Encargado de transmitir mensajes, luego los \doxylink{class_xohat_1_1_message___listener}{Message\+\_\+\+Listener} tienen que suscrbirse al flujo de información que proporciona. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_xohat}{Xohat}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Código relacionado con el sistema de mensajería. 
+
+\begin{DoxyAuthor}{Author}
+Arturo Vilar Carretero 
+\end{DoxyAuthor}

@@ -1,0 +1,262 @@
+\doxysection{engine\+::Keyboard Class Reference}
+\hypertarget{classengine_1_1_keyboard}{}\label{classengine_1_1_keyboard}\index{engine::Keyboard@{engine::Keyboard}}
+
+
+{\ttfamily \#include $<$Keyboard.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840}{Key\+\_\+\+Code}} \{ \newline
+\mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ab6d3c968c03986aa6e97f864580d7b6d}{KEY\+\_\+\+UNKOWN}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a813202ea60049f17bea0a68495c8c090}{KEY\+\_\+\+RETURN}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9fb2da1eb15cafac3a8bd2b971a2e735}{KEY\+\_\+\+ESCAPE}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ae6e93373ad95d120912ab237ee8f16de}{KEY\+\_\+\+BACKSPACE}}
+, \newline
+\mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840afabb79c12deeb272384770ba299b62e5}{KEY\+\_\+\+TAB}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a19430f279c5e4a8c1572f6ef72ba2bec}{KEY\+\_\+\+SPACE}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a4d0bcb4fbcb2ee8400389a9b4119ed66}{KEY\+\_\+A}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a1ff3be3f6f16413f1f6a57fcee7c8d14}{KEY\+\_\+B}}
+, \newline
+\mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8c1b52cc738c6d9574223bec98f824bc}{KEY\+\_\+C}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ac25896a7682ce81fab3425afddfdbcc3}{KEY\+\_\+D}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a17c52d6f7860b875f36cdd2eb2cb3703}{KEY\+\_\+E}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a22167f4d1dd0bcca719caba04d3352d8}{KEY\+\_\+F}}
+, \newline
+\mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ad042e859d0ae82f8b141d7e31e7e03a1}{KEY\+\_\+G}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a27c56152f89609cede5a9f2ef2cde2d1}{KEY\+\_\+H}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a3c6e607f8d4016e131c0c851ca80da61}{KEY\+\_\+I}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a41e486c6ad83043b4401cd3cfb01191b}{KEY\+\_\+J}}
+, \newline
+\mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8ccbe4acb9dd8524335fe731d5eca291}{KEY\+\_\+K}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8bb451084b62b148b96ab0fceee034e6}{KEY\+\_\+L}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a0ffd63d587ce84fb6774daf2c1ba856e}{KEY\+\_\+M}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a636c29fbab2e25328914ee93cc89d875}{KEY\+\_\+N}}
+, \newline
+\mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a3c21d6f8cd30ebce941f5b5f969cb8c0}{KEY\+\_\+O}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a2e1d1582d10c02d0f420e6825cae9e44}{KEY\+\_\+P}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a2a96cc3b9c0e6f5e1e3dedcdd9f91b83}{KEY\+\_\+Q}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a6fd89286f512a772741c99b6a2e7cb58}{KEY\+\_\+R}}
+, \newline
+\mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a52f42fa6eb7ea03ae39a45247e90c40f}{KEY\+\_\+S}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ab36e4c51b9f1af31fac5bd5003b241f9}{KEY\+\_\+T}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9022c18a734f3e45d80a49c4d6d57147}{KEY\+\_\+U}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840afec7026a13197b54217459703ab5be7e}{KEY\+\_\+V}}
+, \newline
+\mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a65ad465d11329e2d7a9b856edab286f9}{KEY\+\_\+W}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a14b23f59dff64238ddf14272a8573c8c}{KEY\+\_\+X}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9242f8be15a9c3efc0a351550957a9ae}{KEY\+\_\+Y}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840af843a34cd3def77367c1595b4fc385c0}{KEY\+\_\+Z}}
+, \newline
+\mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a69988026fb580e7849a84feec2557026}{KEY\+\_\+0}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9b921fef5a9ecbf7483b90381685b5d8}{KEY\+\_\+1}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a62f03dd70b18372b46db46891ee719f5}{KEY\+\_\+2}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ac89aabf057700feaa57bc7cb4489ad98}{KEY\+\_\+3}}
+, \newline
+\mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a750c07c07638a8c34850eb7786c429ce}{KEY\+\_\+4}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840aeffa8a7e57d3de1dff634edcc29760d3}{KEY\+\_\+5}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ae0b75bf2d14996ce6602953136eec432}{KEY\+\_\+6}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a04031e50f449fc390047a6ac33f0a2ba}{KEY\+\_\+7}}
+, \newline
+\mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a38b849f16bbd12569fb82caf9e195acd}{KEY\+\_\+8}}
+, \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a759e9186137f8671aa9ef8bbb0a93fa5}{KEY\+\_\+9}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840}{Key\+\_\+\+Code}} \mbox{\hyperlink{classengine_1_1_keyboard_a0b5cd8bbe99d9818309238ec5e76c1dc}{translate\+\_\+sdl\+\_\+key\+\_\+code}} (int sdl\+\_\+key\+\_\+code)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840} 
+\index{engine::Keyboard@{engine::Keyboard}!Key\_Code@{Key\_Code}}
+\index{Key\_Code@{Key\_Code}!engine::Keyboard@{engine::Keyboard}}
+\doxysubsubsection{\texorpdfstring{Key\_Code}{Key\_Code}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840}{engine\+::\+Keyboard\+::\+Key\+\_\+\+Code}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_UNKOWN@{KEY\_UNKOWN}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_UNKOWN@{KEY\_UNKOWN}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ab6d3c968c03986aa6e97f864580d7b6d}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ab6d3c968c03986aa6e97f864580d7b6d} 
+KEY\+\_\+\+UNKOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_RETURN@{KEY\_RETURN}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_RETURN@{KEY\_RETURN}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a813202ea60049f17bea0a68495c8c090}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a813202ea60049f17bea0a68495c8c090} 
+KEY\+\_\+\+RETURN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_ESCAPE@{KEY\_ESCAPE}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_ESCAPE@{KEY\_ESCAPE}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9fb2da1eb15cafac3a8bd2b971a2e735}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9fb2da1eb15cafac3a8bd2b971a2e735} 
+KEY\+\_\+\+ESCAPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_BACKSPACE@{KEY\_BACKSPACE}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_BACKSPACE@{KEY\_BACKSPACE}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ae6e93373ad95d120912ab237ee8f16de}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ae6e93373ad95d120912ab237ee8f16de} 
+KEY\+\_\+\+BACKSPACE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_TAB@{KEY\_TAB}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_TAB@{KEY\_TAB}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840afabb79c12deeb272384770ba299b62e5}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840afabb79c12deeb272384770ba299b62e5} 
+KEY\+\_\+\+TAB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_SPACE@{KEY\_SPACE}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_SPACE@{KEY\_SPACE}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a19430f279c5e4a8c1572f6ef72ba2bec}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a19430f279c5e4a8c1572f6ef72ba2bec} 
+KEY\+\_\+\+SPACE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_A@{KEY\_A}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_A@{KEY\_A}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a4d0bcb4fbcb2ee8400389a9b4119ed66}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a4d0bcb4fbcb2ee8400389a9b4119ed66} 
+KEY\+\_\+A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_B@{KEY\_B}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_B@{KEY\_B}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a1ff3be3f6f16413f1f6a57fcee7c8d14}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a1ff3be3f6f16413f1f6a57fcee7c8d14} 
+KEY\+\_\+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_C@{KEY\_C}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_C@{KEY\_C}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8c1b52cc738c6d9574223bec98f824bc}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8c1b52cc738c6d9574223bec98f824bc} 
+KEY\+\_\+C&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_D@{KEY\_D}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_D@{KEY\_D}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ac25896a7682ce81fab3425afddfdbcc3}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ac25896a7682ce81fab3425afddfdbcc3} 
+KEY\+\_\+D&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_E@{KEY\_E}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_E@{KEY\_E}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a17c52d6f7860b875f36cdd2eb2cb3703}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a17c52d6f7860b875f36cdd2eb2cb3703} 
+KEY\+\_\+E&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_F@{KEY\_F}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_F@{KEY\_F}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a22167f4d1dd0bcca719caba04d3352d8}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a22167f4d1dd0bcca719caba04d3352d8} 
+KEY\+\_\+F&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_G@{KEY\_G}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_G@{KEY\_G}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ad042e859d0ae82f8b141d7e31e7e03a1}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ad042e859d0ae82f8b141d7e31e7e03a1} 
+KEY\+\_\+G&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_H@{KEY\_H}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_H@{KEY\_H}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a27c56152f89609cede5a9f2ef2cde2d1}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a27c56152f89609cede5a9f2ef2cde2d1} 
+KEY\+\_\+H&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_I@{KEY\_I}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_I@{KEY\_I}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a3c6e607f8d4016e131c0c851ca80da61}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a3c6e607f8d4016e131c0c851ca80da61} 
+KEY\+\_\+I&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_J@{KEY\_J}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_J@{KEY\_J}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a41e486c6ad83043b4401cd3cfb01191b}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a41e486c6ad83043b4401cd3cfb01191b} 
+KEY\+\_\+J&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_K@{KEY\_K}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_K@{KEY\_K}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8ccbe4acb9dd8524335fe731d5eca291}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8ccbe4acb9dd8524335fe731d5eca291} 
+KEY\+\_\+K&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_L@{KEY\_L}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_L@{KEY\_L}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8bb451084b62b148b96ab0fceee034e6}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a8bb451084b62b148b96ab0fceee034e6} 
+KEY\+\_\+L&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_M@{KEY\_M}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_M@{KEY\_M}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a0ffd63d587ce84fb6774daf2c1ba856e}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a0ffd63d587ce84fb6774daf2c1ba856e} 
+KEY\+\_\+M&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_N@{KEY\_N}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_N@{KEY\_N}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a636c29fbab2e25328914ee93cc89d875}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a636c29fbab2e25328914ee93cc89d875} 
+KEY\+\_\+N&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_O@{KEY\_O}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_O@{KEY\_O}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a3c21d6f8cd30ebce941f5b5f969cb8c0}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a3c21d6f8cd30ebce941f5b5f969cb8c0} 
+KEY\+\_\+O&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_P@{KEY\_P}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_P@{KEY\_P}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a2e1d1582d10c02d0f420e6825cae9e44}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a2e1d1582d10c02d0f420e6825cae9e44} 
+KEY\+\_\+P&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_Q@{KEY\_Q}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_Q@{KEY\_Q}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a2a96cc3b9c0e6f5e1e3dedcdd9f91b83}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a2a96cc3b9c0e6f5e1e3dedcdd9f91b83} 
+KEY\+\_\+Q&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_R@{KEY\_R}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_R@{KEY\_R}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a6fd89286f512a772741c99b6a2e7cb58}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a6fd89286f512a772741c99b6a2e7cb58} 
+KEY\+\_\+R&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_S@{KEY\_S}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_S@{KEY\_S}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a52f42fa6eb7ea03ae39a45247e90c40f}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a52f42fa6eb7ea03ae39a45247e90c40f} 
+KEY\+\_\+S&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_T@{KEY\_T}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_T@{KEY\_T}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ab36e4c51b9f1af31fac5bd5003b241f9}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ab36e4c51b9f1af31fac5bd5003b241f9} 
+KEY\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_U@{KEY\_U}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_U@{KEY\_U}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9022c18a734f3e45d80a49c4d6d57147}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9022c18a734f3e45d80a49c4d6d57147} 
+KEY\+\_\+U&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_V@{KEY\_V}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_V@{KEY\_V}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840afec7026a13197b54217459703ab5be7e}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840afec7026a13197b54217459703ab5be7e} 
+KEY\+\_\+V&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_W@{KEY\_W}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_W@{KEY\_W}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a65ad465d11329e2d7a9b856edab286f9}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a65ad465d11329e2d7a9b856edab286f9} 
+KEY\+\_\+W&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_X@{KEY\_X}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_X@{KEY\_X}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a14b23f59dff64238ddf14272a8573c8c}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a14b23f59dff64238ddf14272a8573c8c} 
+KEY\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_Y@{KEY\_Y}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_Y@{KEY\_Y}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9242f8be15a9c3efc0a351550957a9ae}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9242f8be15a9c3efc0a351550957a9ae} 
+KEY\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_Z@{KEY\_Z}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_Z@{KEY\_Z}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840af843a34cd3def77367c1595b4fc385c0}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840af843a34cd3def77367c1595b4fc385c0} 
+KEY\+\_\+Z&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_0@{KEY\_0}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_0@{KEY\_0}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a69988026fb580e7849a84feec2557026}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a69988026fb580e7849a84feec2557026} 
+KEY\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_1@{KEY\_1}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_1@{KEY\_1}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9b921fef5a9ecbf7483b90381685b5d8}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a9b921fef5a9ecbf7483b90381685b5d8} 
+KEY\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_2@{KEY\_2}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_2@{KEY\_2}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a62f03dd70b18372b46db46891ee719f5}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a62f03dd70b18372b46db46891ee719f5} 
+KEY\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_3@{KEY\_3}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_3@{KEY\_3}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ac89aabf057700feaa57bc7cb4489ad98}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ac89aabf057700feaa57bc7cb4489ad98} 
+KEY\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_4@{KEY\_4}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_4@{KEY\_4}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a750c07c07638a8c34850eb7786c429ce}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a750c07c07638a8c34850eb7786c429ce} 
+KEY\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_5@{KEY\_5}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_5@{KEY\_5}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840aeffa8a7e57d3de1dff634edcc29760d3}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840aeffa8a7e57d3de1dff634edcc29760d3} 
+KEY\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_6@{KEY\_6}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_6@{KEY\_6}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ae0b75bf2d14996ce6602953136eec432}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840ae0b75bf2d14996ce6602953136eec432} 
+KEY\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_7@{KEY\_7}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_7@{KEY\_7}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a04031e50f449fc390047a6ac33f0a2ba}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a04031e50f449fc390047a6ac33f0a2ba} 
+KEY\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_8@{KEY\_8}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_8@{KEY\_8}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a38b849f16bbd12569fb82caf9e195acd}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a38b849f16bbd12569fb82caf9e195acd} 
+KEY\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_9@{KEY\_9}!engine::Keyboard@{engine::Keyboard}}\index{engine::Keyboard@{engine::Keyboard}!KEY\_9@{KEY\_9}}}\Hypertarget{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a759e9186137f8671aa9ef8bbb0a93fa5}\label{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840a759e9186137f8671aa9ef8bbb0a93fa5} 
+KEY\+\_\+9&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classengine_1_1_keyboard_a0b5cd8bbe99d9818309238ec5e76c1dc}\label{classengine_1_1_keyboard_a0b5cd8bbe99d9818309238ec5e76c1dc} 
+\index{engine::Keyboard@{engine::Keyboard}!translate\_sdl\_key\_code@{translate\_sdl\_key\_code}}
+\index{translate\_sdl\_key\_code@{translate\_sdl\_key\_code}!engine::Keyboard@{engine::Keyboard}}
+\doxysubsubsection{\texorpdfstring{translate\_sdl\_key\_code()}{translate\_sdl\_key\_code()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classengine_1_1_keyboard_ad2265912373c349727fad6f55c9a9840}{Key\+\_\+\+Code}} engine\+::\+Keyboard\+::translate\+\_\+sdl\+\_\+key\+\_\+code (\begin{DoxyParamCaption}\item[{int}]{sdl\+\_\+key\+\_\+code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Esta función sirve para traducir un código de tecla de SDL a uno propio del engine. TO DO\+: La función se debería \"{}esconder\"{} en lugar de tenerla presente en la interfaz pública (pese a que no crea dependencias con SDL a quien use el engine). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Github/\+Engine\+\_\+\+Motores/\+ENGINE/code/headers/\mbox{\hyperlink{_keyboard_8hpp}{Keyboard.\+hpp}}\end{DoxyCompactItemize}
